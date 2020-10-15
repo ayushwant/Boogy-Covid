@@ -45,14 +45,23 @@ public class fetchIndiaLatest
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            indiaLatest response = gson.fromJson(br, indiaLatest.class);
+            indiaLatest response = gson.fromJson(br, indiaLatest.class); // created response object
 
             System.out.println("Success: " + response.success); // you can directly use variable name
-            System.out.println("Last refreshed: " + response.getLastRefreshed()); // or you can use a getter
+            System.out.println("Last refreshed: " + response.getLastRefreshed() + "\n"); // or you can use a getter
 
-            //indiaLatest.latestData.officialSummary
+            indiaLatest.latestData.officialSummary india = response.data.summary; // LHS: class names; RHS: object names
+            System.out.println(("Total cases: " + india.total));
+            System.out.println("India Total Active: " + india.getIndiaActive() + "\n");
 
-            //System.out.println("India Total Active " + india.get);
+            indiaLatest.latestData.stateWise[] states = response.data.regional; // array of states
+            for(indiaLatest.latestData.stateWise state: states)
+            {
+                System.out.println("Name: "+state.loc);
+                System.out.println(("Total cases: " + state.totalConfirmed));
+                System.out.println("Active cases: " + state.getActive() + "\n");
+            }
+
 
             //indiaLatest.latestData
         }
