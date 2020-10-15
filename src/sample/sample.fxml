@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <AnchorPane layoutY="147.0" prefHeight="123.0" prefWidth="700.0" style="-fx-background-color: #c996b8;">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="94.0" layoutY="38.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
+                     <font>
+                        <Font name="Bauhaus 93" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="398.0" layoutY="39.0" text="RECOVERED" textFill="#22b549">
+                     <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="557.0" layoutY="39.0" text="DEATHS" textFill="YELLOW">
+                     <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="254.0" layoutY="39.0" text=" ACTIVE " textFill="#008eff">
+                     <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="63.0" prefHeight="17.0" prefWidth="82.0" text="Label" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="63.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="64.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="545.0" layoutY="64.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
+                  <Label contentDisplay="CENTER" layoutX="308.0" layoutY="9.0" text="INDIA TOTAL" textFill="#5902f5">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button contentDisplay="CENTER" layoutX="280.0" layoutY="94.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-width: 3;" text="STATE WISE TRACKER" textFill="#2900ff">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="48.0" prefHeight="99.0" prefWidth="700.0" style="-fx-background-color: #c9c9c1;">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="99.0" layoutY="37.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
+                     <font>
+                        <Font name="Bauhaus 93" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="403.0" layoutY="38.0" text="RECOVERED" textFill="#0ed700">
+                     <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="562.0" layoutY="38.0" text="DEATHS" textFill="#ddf503">
+                     <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="259.0" layoutY="38.0" text=" ACTIVE " textFill="#008eff">
+                     <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="62.0" prefHeight="17.0" prefWidth="82.0" text="Label">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="62.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="403.0" layoutY="63.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="550.0" layoutY="63.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label contentDisplay="CENTER" layoutX="313.0" layoutY="9.0" text="WORLD TOTAL" textFill="#022af7">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="271.0" prefHeight="253.0" prefWidth="700.0" style="-fx-background-color: yellow;">
+               <children>
+                  <ImageView fitHeight="222.0" fitWidth="267.0" layoutX="205.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/symptom.png" />
+                     </image>
+                  </ImageView>
+                  <Button contentDisplay="CENTER" layoutX="277.0" layoutY="224.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 3;" text="SYMPTOM ANALYSER" textFill="#ff5500">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="524.0" prefHeight="176.0" prefWidth="700.0" style="-fx-background-color: #008eff;">
+               <children>
+                  <Label alignment="CENTER" layoutX="255.0" layoutY="1.0" prefHeight="27.0" prefWidth="191.0" text="FOR MORE INFORMATION" textFill="#141414">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button contentDisplay="CENTER" layoutX="316.0" layoutY="36.0" mnemonicParsing="false" onAction="#whobtn" text="WHO SITE" textFill="#400df8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button contentDisplay="CENTER" layoutX="258.0" layoutY="69.0" mnemonicParsing="false" onAction="#indbtn" text="GOVERNMENT OF INDIA SITE" textFill="#3009f5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="306.0" layoutY="103.0" mnemonicParsing="false" text="LATEST NEWS" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="advisorybtn" layoutX="294.0" layoutY="137.0" mnemonicParsing="false" onAction="#advisoryListener" text="ADVISORY &amp; HELP" textFill="#08b52d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="49.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="-3.0" prefHeight="49.0" prefWidth="247.0" text="COVID TRACKER" textFill="#141414">
+                     <font>
+                        <Font name="Georgia Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="refreshBtnM" layoutX="621.0" layoutY="10.0" mnemonicParsing="false" onAction="#refreshListener" text="REFRESH" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
