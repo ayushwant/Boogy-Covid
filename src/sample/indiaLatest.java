@@ -1,4 +1,4 @@
-package sample.covid_data.india_latest;
+package sample;
 
 public class indiaLatest {
     boolean success;

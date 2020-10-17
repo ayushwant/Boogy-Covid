@@ -1,4 +1,4 @@
-package sample.covid_data.india_latest;
+package sample;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
