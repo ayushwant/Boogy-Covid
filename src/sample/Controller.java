@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ResourceBundle;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,83 +15,42 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML
-    public Button advisorybtn;
+    public Button advisoryBtn;
     public Button refreshBtnM;
     public Button stateBtn;
-    public Label comfirmL;
-    public Label activeL;
-    public Label recoverL;
-    public Label deathL;
-    public Label timestampL;
-    public Button click;
-    public Button newsbtn;
-    public Button symanabtn;
-
+    public Label comfirmLbl;
+    public Label activeLbl;
+    public Label recoverLbl;
+    public Label deathLbl;
+    public Label timestampLbl;
+    public Button newsBtn;
+    public Button symptomBtn;
 
     Desktop d=Desktop.getDesktop();
-    public void clickListener(ActionEvent e){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Gson gson = new GsonBuilder().create();
-                int confirmed=0,active=0,death=0,recovered=0;
-                String timestamp=null;
-                try {
-                    BufferedReader br = new BufferedReader(new FileReader("indiaLatestJSON.json"));
-                    indiaLatest response = gson.fromJson(br, indiaLatest.class);
-                    System.out.println("read file successfully : " + response.success);
-                    indiaLatest.latestData.officialSummary indiaT = response.data.summary;
-                    confirmed = indiaT.total;
-                    active = indiaT.getIndiaActive();
-                    death= indiaT.deaths;
-                    recovered= indiaT.discharged;
-                    timestamp=response.lastRefreshed;
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                int finalC=confirmed;
-                int finalA=active;
-                int finalD=death;
-                int finalR=recovered;
-                String finalT=timestamp;
-                    Platform.runLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            comfirmL.setText(String.valueOf(finalC));
-                            activeL.setText(String.valueOf(finalA));
-                            recoverL.setText(String.valueOf(finalR));
-                            deathL.setText(String.valueOf(finalD));
-                            timestampL.setText(finalT);
-                        }
-                    });
-
-                }
-
-        }).start();
-    }
 
     @FXML
     private ResourceBundle resources;
 
     @FXML
-    void whobtn(ActionEvent event) throws URISyntaxException, IOException {
+    void whoListener(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI("https://www.who.int"));
     }
     @FXML
-    void indbtn(ActionEvent event) throws URISyntaxException, IOException {
+    void indianGovernmentListener(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI("https://www.mygov.in/covid-19"));
     }
     @FXML
     void advisoryListener(ActionEvent event){
-        Stage stage= (Stage) advisorybtn.getScene().getWindow();
+        Stage stage= (Stage) advisoryBtn.getScene().getWindow();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("advisory.fxml"));
@@ -126,7 +86,7 @@ public class Controller {
 
     @FXML
     void newsListener(ActionEvent actionEvent){
-        Stage stage= (Stage) newsbtn.getScene().getWindow();
+        Stage stage= (Stage) newsBtn.getScene().getWindow();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("news.fxml"));
@@ -138,7 +98,7 @@ public class Controller {
     }
     @FXML
      public void symanaListener(ActionEvent event){
-        Stage stage= (Stage) symanabtn.getScene().getWindow();
+        Stage stage= (Stage) symptomBtn.getScene().getWindow();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("symanalyzer.fxml"));
@@ -148,4 +108,45 @@ public class Controller {
         stage.setScene(new Scene(root, 700, 700));
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Gson gson = new GsonBuilder().create();
+                int confirmed=0,active=0,death=0,recovered=0;
+                String timestamp=null;
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader("indiaLatestJSON.json"));
+                    indiaLatest response = gson.fromJson(br, indiaLatest.class);
+                    System.out.println("read file successfully : " + response.success);
+                    indiaLatest.latestData.officialSummary indiaT = response.data.summary;
+                    confirmed = indiaT.total;
+                    active = indiaT.getIndiaActive();
+                    death= indiaT.deaths;
+                    recovered= indiaT.discharged;
+                    timestamp=response.lastRefreshed;
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                int finalC=confirmed;
+                int finalA=active;
+                int finalD=death;
+                int finalR=recovered;
+                String finalT=timestamp;
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        comfirmLbl.setText(String.valueOf(finalC));
+                        activeLbl.setText(String.valueOf(finalA));
+                        recoverLbl.setText(String.valueOf(finalR));
+                        deathLbl.setText(String.valueOf(finalD));
+                        timestampLbl.setText("Last updated : "+finalT);
+                    }
+                });
+
+            }
+
+        }).start();
+    }
 }

@@ -22,38 +22,50 @@
    <children>
       <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="700.0">
          <children>
-            <AnchorPane layoutY="47.0" prefHeight="123.0" prefWidth="700.0" style="-fx-background-color: #c996b8;">
+            <AnchorPane layoutY="47.0" prefHeight="154.0" prefWidth="700.0" style="-fx-background-color: #c996b8;">
                <children>
-                  <Label contentDisplay="CENTER" layoutX="94.0" layoutY="38.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
+                  <Label contentDisplay="CENTER" layoutX="93.0" layoutY="70.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
                      <font>
                         <Font name="Bauhaus 93" size="13.0" />
                      </font>
                   </Label>
-                  <Label contentDisplay="CENTER" layoutX="398.0" layoutY="39.0" text="RECOVERED" textFill="#22b549">
+                  <Label contentDisplay="CENTER" layoutX="397.0" layoutY="71.0" text="RECOVERED" textFill="#22b549">
                      <font>
                         <Font name="Bauhaus 93" size="12.0" />
                      </font>
                   </Label>
-                  <Label contentDisplay="CENTER" layoutX="557.0" layoutY="39.0" text="DEATHS" textFill="YELLOW">
+                  <Label contentDisplay="CENTER" layoutX="556.0" layoutY="71.0" text="DEATHS" textFill="YELLOW">
                      <font>
                         <Font name="Bauhaus 93" size="12.0" />
                      </font>
                   </Label>
-                  <Label contentDisplay="CENTER" layoutX="254.0" layoutY="39.0" text=" ACTIVE " textFill="#008eff">
+                  <Label contentDisplay="CENTER" layoutX="253.0" layoutY="71.0" text=" ACTIVE " textFill="#008eff">
                      <font>
                         <Font name="Bauhaus 93" size="12.0" />
                      </font>
                   </Label>
-                  <Label fx:id="comfirmL" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="63.0" prefHeight="17.0" prefWidth="82.0" text="Label" />
-                  <Label fx:id="activeL" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="63.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
-                  <Label fx:id="recoverL" alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="64.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
-                  <Label fx:id="deathL" alignment="CENTER" contentDisplay="CENTER" layoutX="545.0" layoutY="64.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
-                  <Label contentDisplay="CENTER" layoutX="308.0" layoutY="9.0" text="INDIA TOTAL" textFill="#5902f5">
+                  <Label fx:id="comfirmLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="95.0" prefHeight="17.0" prefWidth="82.0" text="Label">
                      <font>
-                        <Font name="Berlin Sans FB Bold" size="14.0" />
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="activeLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="95.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="recoverLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="397.0" layoutY="96.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="deathLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="544.0" layoutY="96.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label contentDisplay="CENTER" layoutX="296.0" layoutY="2.0" text="INDIA TOTAL" textFill="#5902f5">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="stateBtn" contentDisplay="CENTER" layoutX="280.0" layoutY="94.0" mnemonicParsing="false" onAction="#stateListener" style="-fx-border-color: black; -fx-border-width: 3;" text="STATE WISE TRACKER" textFill="#2900ff">
+                  <Button fx:id="stateBtn" contentDisplay="CENTER" layoutX="280.0" layoutY="125.0" mnemonicParsing="false" onAction="#stateListener" style="-fx-border-color: black; -fx-border-width: 3;" text="STATE WISE TRACKER" textFill="#2900ff">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -64,18 +76,17 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="click" layoutY="-3.0" mnemonicParsing="false" onAction="#clickListener" text="click" />
-                  <Label fx:id="timestampL" alignment="CENTER" contentDisplay="CENTER" layoutX="409.0" layoutY="11.0" prefHeight="17.0" prefWidth="217.0" text="Label" textAlignment="CENTER" />
+                  <Label fx:id="timestampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="47.0" prefHeight="17.0" prefWidth="217.0" text="Label" textAlignment="CENTER" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="172.0" prefHeight="351.0" prefWidth="700.0" style="-fx-background-color: yellow;">
+            <AnchorPane layoutY="202.0" prefHeight="316.0" prefWidth="700.0" style="-fx-background-color: yellow;">
                <children>
-                  <ImageView fitHeight="316.0" fitWidth="380.0" layoutX="165.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="291.0" fitWidth="370.0" layoutX="180.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/symptom.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="symanabtn" contentDisplay="CENTER" layoutX="277.0" layoutY="322.0" mnemonicParsing="false" onAction="#symanaListener" prefHeight="20.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 3;" text="SYMPTOM ANALYSER" textFill="#ff5500">
+                  <Button fx:id="symptomBtn" contentDisplay="CENTER" layoutX="277.0" layoutY="291.0" mnemonicParsing="false" onAction="#symanaListener" prefHeight="20.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 3;" text="SYMPTOM ANALYSER" textFill="#ff1300">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -91,14 +102,14 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button contentDisplay="CENTER" layoutX="316.0" layoutY="36.0" mnemonicParsing="false" onAction="#whobtn" text="WHO SITE" textFill="#400df8">
+                  <Button contentDisplay="CENTER" layoutX="316.0" layoutY="36.0" mnemonicParsing="false" onAction="#whoListener" text="WHO SITE" textFill="#400df8">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button contentDisplay="CENTER" layoutX="258.0" layoutY="69.0" mnemonicParsing="false" onAction="#indbtn" text="GOVERNMENT OF INDIA SITE" textFill="#3009f5">
+                  <Button contentDisplay="CENTER" layoutX="258.0" layoutY="69.0" mnemonicParsing="false" onAction="#indianGovernmentListener" text="GOVERNMENT OF INDIA SITE" textFill="#3009f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -106,14 +117,14 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="newsbtn" layoutX="306.0" layoutY="103.0" mnemonicParsing="false" onAction="#newsListener" text="LATEST NEWS" textFill="RED">
+                  <Button fx:id="newsBtn" layoutX="306.0" layoutY="103.0" mnemonicParsing="false" onAction="#newsListener" text="LATEST NEWS" textFill="RED">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="advisorybtn" layoutX="294.0" layoutY="137.0" mnemonicParsing="false" onAction="#advisoryListener" text="ADVISORY &amp; HELP" textFill="#08b52d">
+                  <Button fx:id="advisoryBtn" layoutX="294.0" layoutY="137.0" mnemonicParsing="false" onAction="#advisoryListener" text="ADVISORY &amp; HELP" textFill="#08b52d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -124,7 +135,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="44.0" prefWidth="700.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="-1.0" prefHeight="50.0" prefWidth="337.0" text="INDIA COVID TRACKER" textFill="#141414">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="-1.0" prefHeight="50.0" prefWidth="337.0" text="INDIA COVID TRACKER" textFill="#fc0202">
                      <font>
                         <Font name="Algerian" size="26.0" />
                      </font>

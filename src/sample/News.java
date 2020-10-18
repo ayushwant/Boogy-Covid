@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,16 +8,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class News {
     @FXML
-    private Button refreshBtnN;
+    public Button refreshBtnN;
     public Button backBtnN;
 
     @FXML
-    private void refreshListenerN(ActionEvent event){
+    void refreshListenerN(ActionEvent event){
+        System.out.println("refreshing news");
         Stage stage= (Stage) refreshBtnN.getScene().getWindow();
         Parent root = null;
         try {
@@ -24,11 +25,11 @@ public class News {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage.setScene(new Scene(root));
+        stage.setScene(new Scene(root,700,700));
     }
 
     @FXML
-    public void backListenerN(ActionEvent event){
+    void backListenerN(ActionEvent event){
         Stage stage= (Stage) backBtnN.getScene().getWindow();
         Parent root = null;
         try {
@@ -38,4 +39,5 @@ public class News {
         }
         stage.setScene(new Scene(root));
     }
+
 }
