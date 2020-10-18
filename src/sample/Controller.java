@@ -32,6 +32,7 @@ public class Controller {
     public Label timestampL;
     public Button click;
     public Button newsbtn;
+    public Button symanabtn;
 
 
     Desktop d=Desktop.getDesktop();
@@ -135,4 +136,16 @@ public class Controller {
         }
         stage.setScene(new Scene(root));
     }
+    @FXML
+     public void symanaListener(ActionEvent event){
+        Stage stage= (Stage) symanabtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("symanalyzer.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 700, 700));
+    }
+
 }

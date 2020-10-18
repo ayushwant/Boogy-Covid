@@ -75,7 +75,7 @@
                         <Image url="@../img/symptom.png" />
                      </image>
                   </ImageView>
-                  <Button contentDisplay="CENTER" layoutX="277.0" layoutY="322.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 3;" text="SYMPTOM ANALYSER" textFill="#ff5500">
+                  <Button fx:id="symanabtn" contentDisplay="CENTER" layoutX="277.0" layoutY="322.0" mnemonicParsing="false" onAction="#symanaListener" prefHeight="20.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 3;" text="SYMPTOM ANALYSER" textFill="#ff5500">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -106,7 +106,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="306.0" layoutY="103.0" mnemonicParsing="false" onAction="#newsListener" text="LATEST NEWS" textFill="RED">
+                  <Button fx:id="newsbtn" layoutX="306.0" layoutY="103.0" mnemonicParsing="false" onAction="#newsListener" text="LATEST NEWS" textFill="RED">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
