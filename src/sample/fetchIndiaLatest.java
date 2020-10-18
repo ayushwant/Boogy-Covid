@@ -29,15 +29,13 @@ public class fetchIndiaLatest
             while((c=br.read())!=-1) // write to file
             {
                 fos.write((char) c);
-                //System.out.print((char) c);
             }
             fos.close();
         }
         catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred in fetchIndiaLatest.java");
             e.printStackTrace();
         }
-
 
         //now gson handling
         try {
@@ -47,29 +45,14 @@ public class fetchIndiaLatest
 
             indiaLatest response = gson.fromJson(br, indiaLatest.class); // created response object
 
-            System.out.println("Success: " + response.success); // you can directly use variable name
-            System.out.println("Last refreshed: " + response.getLastRefreshed() + "\n"); // or you can use a getter
+            System.out.println("Success in gson handling : " + response.success); // you can directly use variable name
+            System.out.println("Last refreshed : " + response.getLastRefreshed() + "\n"); // or you can use a getter
 
             indiaLatest.latestData.officialSummary india = response.data.summary; // LHS: class names; RHS: object names
-            System.out.println(("Total cases: " + india.total));
-            System.out.println("India Total Active: " + india.getIndiaActive() + "\n");
-
             indiaLatest.latestData.stateWise[] states = response.data.regional; // array of states
-            for(indiaLatest.latestData.stateWise state: states)
-            {
-                System.out.println("Name: "+state.loc);
-                System.out.println(("Total cases: " + state.totalConfirmed));
-                System.out.println("Active cases: " + state.getActive() + "\n");
-            }
-
-
-            //indiaLatest.latestData
         }
         catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
-
     }
-
 }

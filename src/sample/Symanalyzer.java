@@ -13,19 +13,19 @@ import java.io.IOException;
 
 public class Symanalyzer {
     public Button backBtnSA;
-    public RadioButton rby1;
-    public RadioButton rby2;
-    public RadioButton rby3;
-    public RadioButton rby4;
-    public RadioButton rby5;
-    public RadioButton rby6;
-    public RadioButton rbn1;
-    public RadioButton rbn2;
-    public RadioButton rbn3;
-    public RadioButton rbn4;
-    public RadioButton rbn5;
-    public RadioButton rbn6;
-    public Label lb2;
+    public RadioButton rbYes1A;
+    public RadioButton rbYes1B;
+    public RadioButton rbYes1C;
+    public RadioButton rbYes1D;
+    public RadioButton rbYes2;
+    public RadioButton rbYes3;
+    public RadioButton rbNo1A;
+    public RadioButton rbNo1B;
+    public RadioButton rbNo1C;
+    public RadioButton rbNo1D;
+    public RadioButton rbNo2;
+    public RadioButton rbNo3;
+    public Label resultLbl;
 
 
 
@@ -43,50 +43,47 @@ public class Symanalyzer {
         String message ="";
         int chanceper =0;
 
-        if (rby1.isSelected()) {
+        if (rbYes1A.isSelected()) {
             chanceper=1;
         }
-        if (rbn1.isSelected()) {
+        if (rbNo1A.isSelected()) {
             chanceper += 0;
         }
-        if (rby2.isSelected()) {
+        if (rbYes1B.isSelected()) {
             chanceper=2;
         }
-        if (rbn2.isSelected()) {
+        if (rbNo1B.isSelected()) {
             chanceper +=0;
         }
-        if (rby3.isSelected()) {
+        if (rbYes1C.isSelected()) {
             chanceper=3;;
         }
-        if (rbn3.isSelected()) {
+        if (rbNo1C.isSelected()) {
             chanceper += 0;
         }
-
-
-        if (rby4.isSelected()) {
+        if (rbYes1D.isSelected()) {
             chanceper=4;
         }
-        if (rbn4.isSelected()) {
+        if (rbNo1D.isSelected()) {
             chanceper += 0;
         }
 
-        if (rby5.isSelected()) {
+        if (rbYes2.isSelected()) {
             chanceper=5;
         }
-        if (rbn5.isSelected()) {
+        if (rbNo2.isSelected()) {
+            chanceper += 0;
+        }
+        if (rbYes3.isSelected()) {
+            chanceper=6;
+        }
+        if (rbNo3.isSelected()) {
             chanceper += 0;
         }
 
-        if (rby6.isSelected()) {
-            chanceper=6;
-        }
-        if (rbn6.isSelected()) {
-            chanceper += 0;
-        }
         if (chanceper ==0){
             message += "You are at " + 0 + "% risk. Be safe and healthy.";
         }
-
         if (chanceper == 1){
             message += "You are at " + 1 + "% to " + 20 + "% risk. Be in Quarantine and visit medical if necessary.";
         }
@@ -99,6 +96,6 @@ public class Symanalyzer {
         if (5 <= chanceper && chanceper <= 6) {
             message += "You are at " + 80 + "% to " + 100 + "% risk. Must go for covid-19 checkup.";
         }
-        lb2.setText(message);
+        resultLbl.setText(message);
     }
 }
