@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Symanalyzer">
+    <children>
+        <AnchorPane layoutX="180.0" layoutY="8.0" prefHeight="30.0" prefWidth="378.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-15.0" layoutY="-9.0" prefHeight="46.0" prefWidth="392.0" style="#f20404: #f20404;" text="SYMPTOM ANALYZER" textFill="#0f05f0">
+                    <font>
+                        <Font name="Algerian" size="26.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="88.0" layoutY="34.0" prefHeight="54.0" prefWidth="562.0">
+            <children>
+                <Label alignment="CENTER" layoutX="-8.0" layoutY="3.0" prefHeight="22.0" prefWidth="570.0" text="Please note that the information from this chat will be used for monitoring &amp; management of the current " textFill="#690c17" />
+                <Label alignment="TOP_LEFT" layoutX="-1.0" layoutY="25.0" prefHeight="22.0" prefWidth="570.0" text="health crisis and research in the fight against COVID-19." textFill="#690c17" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="167.0" prefHeight="345.0" prefWidth="700.0">
+            <children>
+                <Label alignment="CENTER" layoutX="72.0" layoutY="38.0" prefHeight="38.0" prefWidth="536.0" text="Are you experiencing any of the following symptoms?" textFill="#0a0ae8">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="76.0" layoutY="77.0" prefHeight="38.0" prefWidth="528.0" text="          a)  DRY COUGH   " textFill="#dd0808">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="rby1" layoutX="398.0" layoutY="85.0" mnemonicParsing="false" onAction="#radioSelect" text="YES" textFill="#08b6f0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Group1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rbn1" layoutX="497.0" layoutY="85.0" mnemonicParsing="false" onAction="#radioSelect" text="NO" textFill="#08b6f0" toggleGroup="$Group1">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </RadioButton>
+                <Label layoutX="86.0" layoutY="108.0" prefHeight="31.0" prefWidth="528.0" text="        b)  HIGH FEVER" textFill="#dd0808">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="86.0" layoutY="132.0" prefHeight="38.0" prefWidth="528.0" text="        c)  SORE THROAT" textFill="#dd0808">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="89.0" layoutY="162.0" prefHeight="31.0" prefWidth="522.0" text="       d)  DIFFICULTY IN BREATHING" textFill="#dd0808">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="rby3" layoutX="398.0" layoutY="140.0" mnemonicParsing="false" onAction="#radioSelect" text="YES" textFill="#08b6f0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Group3" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rby4" layoutX="398.0" layoutY="167.0" mnemonicParsing="false" onAction="#radioSelect" text="YES" textFill="#08b6f0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Group4" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rby2" layoutX="398.0" layoutY="113.0" mnemonicParsing="false" onAction="#radioSelect" text="YES" textFill="#08b6f0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Group2" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rbn2" layoutX="497.0" layoutY="113.0" mnemonicParsing="false" onAction="#radioSelect" text="NO" textFill="#08b6f0" toggleGroup="$Group2">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="rbn3" layoutX="497.0" layoutY="140.0" mnemonicParsing="false" onAction="#radioSelect" text="NO" textFill="#08b6f0" toggleGroup="$Group3">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="rbn4" layoutX="497.0" layoutY="167.0" mnemonicParsing="false" onAction="#radioSelect" text="NO" textFill="#08b6f0" toggleGroup="$Group4">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </RadioButton>
+                <AnchorPane layoutX="60.0" layoutY="193.0" prefHeight="63.0" prefWidth="558.0">
+                    <children>
+                        <Label layoutX="6.0" layoutY="8.0" prefHeight="46.0" prefWidth="438.0" text="Travelled internationally in the last 14 days?" textFill="#0a0ae8">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="rby5" layoutX="341.0" layoutY="50.0" mnemonicParsing="false" onAction="#radioSelect" text="YES" textFill="#08b6f0">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="Group5" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbn5" layoutX="444.0" layoutY="50.0" mnemonicParsing="false" onAction="#radioSelect" text="NO" textFill="#08b6f0" toggleGroup="$Group5">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="64.0" layoutY="263.0" prefHeight="34.0" prefWidth="558.0">
+                    <children>
+                        <Label layoutX="4.0" layoutY="2.0" prefHeight="31.0" prefWidth="558.0" text="Recently interacted or lived or currently live with someone " textFill="#0a0ae8">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="71.0" layoutY="291.0" prefHeight="31.0" prefWidth="552.0" text="who has latest positive for COVID-19?" textFill="#0a0ae8">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="rby6" layoutX="398.0" layoutY="317.0" mnemonicParsing="false" onAction="#radioSelect" text="YES" textFill="#08b6f0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Group6" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rbn6" layoutX="497.0" layoutY="317.0" mnemonicParsing="false" onAction="#radioSelect" text="NO" textFill="#08b6f0" toggleGroup="$Group6">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </RadioButton>
+            </children>
+        </AnchorPane>
+        <Button fx:id="backBtnSA" layoutX="327.0" layoutY="673.0" mnemonicParsing="false" onAction="#backlistenerSA" text="BACK" textFill="#ff5500" />
+        <AnchorPane layoutY="531.0" prefHeight="86.0" prefWidth="700.0">
+            <children>
+                <Label fx:id="lb2" layoutX="73.0" layoutY="24.0" prefHeight="38.0" prefWidth="581.0" text="                                                  RESULT">
+                    <font>
+                        <Font name="Arial" size="17.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                            <stops>
+                                <Stop color="#e00d5a" />
+                                <Stop color="WHITE" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="91.0" prefHeight="110.0" prefWidth="700.0" style="-fx-background-color: ff0000;">
+            <children>
+                <ImageView fitHeight="110.0" fitWidth="570.0" layoutX="80.0" layoutY="-1.0" pickOnBounds="true" smooth="false">
+                    <image>
+                        <Image url="@../img/00-59-08-block-two.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

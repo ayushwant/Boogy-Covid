@@ -14,7 +14,7 @@
          <children>
             <Label alignment="CENTER" layoutX="195.0" prefHeight="48.0" prefWidth="310.0" text="ADVISORY &amp; HELP">
                <font>
-                  <Font name="Georgia Bold" size="25.0" />
+                  <Font name="Algerian" size="26.0" />
                </font>
             </Label>
          </children>
