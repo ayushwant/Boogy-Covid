@@ -14,26 +14,15 @@ public class worldLatest
         String lastUpdatedSource;
         String lastUpdatedApify;
 
-        public int getInfected() {
-                return (int) infected;
-        }
-
-        public int getTested() {
-                return (int) tested;
-        }
-
-        public int getRecovered() {
-                return (int)recovered;
-        }
-
-        public int getDeceased() {
-                return (int) deceased;
-        }
-
-
+        //when using this method, it shows this error
+        //java.lang.Double cannot be cast to java.lang.Integer
         public int getActive()
         {
-            return ((int)infected - (int)recovered - (int)deceased);
+            return (
+                    ((Integer)infected).intValue()
+                            - ((Integer)recovered).intValue()
+                            - ((Integer)deceased).intValue()
+            );
         }
 
 }

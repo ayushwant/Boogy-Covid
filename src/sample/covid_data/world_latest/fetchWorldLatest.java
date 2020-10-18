@@ -57,11 +57,14 @@ public class fetchWorldLatest
                 System.out.println();
             }*/
 
+            // for entire world data, we have to add all the stats from each country
             for(worldLatest country : response)
             {
                 System.out.println("Country: " + country.country);
-                System.out.println("Total infected: " +country.infected);
+                System.out.println("Infected: " +country.infected);
                 //System.out.println("Total recovered: " +country.getRecovered());
+                //System.out.println("Total active: "+ country.getActive());
+                System.out.println();
             }
 
 
