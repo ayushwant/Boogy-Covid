@@ -1,4 +1,4 @@
-package sample.covid_data.world_latest;
+package sample;
 
 public class worldLatest
 {

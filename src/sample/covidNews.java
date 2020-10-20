@@ -1,4 +1,4 @@
-package sample.covid_data.news;
+package sample;
 
 public class covidNews
 {

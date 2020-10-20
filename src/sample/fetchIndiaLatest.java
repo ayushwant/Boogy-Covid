@@ -28,7 +28,7 @@ public class fetchIndiaLatest
             int c;
             while((c=br.read())!=-1) // write to file
             {
-                fos.write((char) c);
+                fos.write(br.read());
                 //System.out.print((char) c);
             }
             fos.close();
