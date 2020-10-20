@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.covid_data.india_latest.fetchIndiaLatest;
+import sample.fetchIndiaLatest;
 
 public class Main extends Application {
 
@@ -16,14 +16,7 @@ public class Main extends Application {
         primaryStage.setTitle("TRACK A COV");
         primaryStage.setScene(new Scene(root, 700, 700));
         primaryStage.show();
-<<<<<<< HEAD
-        fetchIndiaLatest ref = new fetchIndiaLatest();
-        ref.main(null);
-=======
 
-        new fetchIndiaLatest().main(null);
-
->>>>>>> 45d8729338b071d80a8380a81b353b489117f494
     }
 
 
