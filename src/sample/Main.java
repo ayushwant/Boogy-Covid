@@ -23,8 +23,9 @@ public class Main extends Application {
         primaryStage.setTitle("TRACK A COV");
         primaryStage.setScene(new Scene(root, 700, 700));
         primaryStage.show();
-
+        fetchIndiaLatest.main(null);
     }
+
 
 
 

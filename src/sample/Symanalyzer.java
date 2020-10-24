@@ -25,9 +25,21 @@ public class Symanalyzer {
     public RadioButton rbNo1D;
     public RadioButton rbNo2;
     public RadioButton rbNo3;
+    public Button resetBtnSA;
     public Label resultLbl;
 
 
+     public void resetListenerSA(ActionEvent actionEvent){
+        System.out.println("Data reset : true");
+        Stage stage= (Stage) resetBtnSA.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("symanalyzer.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root));
+    }
 
     public void backlistenerSA(ActionEvent event){
         Stage stage= (Stage) backBtnSA.getScene().getWindow();
