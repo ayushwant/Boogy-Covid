@@ -7,13 +7,24 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Calendar;
 
 public class fetchNews
 {
+
     public static void main(String[] args)
     {
-        String searchUrl = "http://newsapi.org/v2/everything?q=covid&from=2020-10-16&to=2020-10-16&" +
-                "sortBy=popularity&apiKey=40b7f5be4e1d455e8c4c1b2420e5d404";
+        Calendar calendar = Calendar.getInstance();
+
+        String toDate = calendar.get(Calendar.YEAR) +"-" +calendar.get(Calendar.MONTH) +"-" +calendar.get(Calendar.DATE);
+        String fromDate = toDate;
+        System.out.println(toDate +"  " +fromDate);
+
+
+        //String searchUrl = "http://newsapi.org/v2/everything?q=covid&from=2020-10-16&to=2020-10-16" +
+        //       "&sortBy=popularity&apiKey=40b7f5be4e1d455e8c4c1b2420e5d404";
+        String searchUrl = "http://newsapi.org/v2/everything?q=covid&from=" +fromDate +"&to=" +toDate
+                +"&sortBy=popularity&apiKey=40b7f5be4e1d455e8c4c1b2420e5d404";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         // creating and writing to file

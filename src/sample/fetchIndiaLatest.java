@@ -31,8 +31,8 @@ public class fetchIndiaLatest
                 int c;
                 while ((c = br.read()) != -1) // write to file
                 {
-                    //fos.write(br.read());  //encoded writing
-                    fos.write((char) c);     // writing characters
+                    fos.write(br.read());  //encoded writing
+                    //fos.write((char) c);     // writing characters
                     //System.out.print((char) c);  //printing characters
                 }
             }
