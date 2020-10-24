@@ -18,19 +18,22 @@ public class fetchDistrictLatest
         try
         {
             File myFile = new File("districtLatestJSON.json");
-            FileOutputStream fos = new FileOutputStream("districtLatestJSON.json");
 
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            int c;
-            while((c=br.read())!=-1) // write to file
+            if(urlcon.getConnectTimeout()==0)  // to check if network established
             {
-                fos.write(br.read());
-                //System.out.print((char) c);
+                FileOutputStream fos = new FileOutputStream("districtLatestJSON.json");
+
+                int c;
+                while ((c = br.read()) != -1) // write to file
+                {
+                    fos.write(br.read());
+                    //System.out.print((char) c);
+                }
             }
-            fos.close();
         }
         catch (IOException e) {
             System.out.println("An error occurred.");

@@ -30,6 +30,7 @@ public class fetchNews
             while((c=br.read())!=-1) // write to file
             {
                 fos.write(br.read());
+                //fos.write((char) c);
                 //System.out.print((char) c);
             }
             fos.close();
@@ -56,6 +57,7 @@ public class fetchNews
                 //covidNews.allArticles.source = news.articles.;
                 System.out.println("Title: " + art.title);
                 System.out.println("url: " + art.url);
+                System.out.println(art.description);
                 System.out.println();
             }
 

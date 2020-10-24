@@ -19,24 +19,30 @@ public class fetchIndiaLatest
         try
         {
             File myFile = new File("indiaLatestJSON.json");
-            FileOutputStream fos = new FileOutputStream("indiaLatestJSON.json");
 
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            int c;
-            while((c=br.read())!=-1) // write to file
+            if(urlcon.getConnectTimeout()==0)  // to check if network established
             {
-                fos.write(br.read());
-                //System.out.print((char) c);
+                FileOutputStream fos = new FileOutputStream("indiaLatestJSON.json");
+
+                int c;
+                while ((c = br.read()) != -1) // write to file
+                {
+                    //fos.write(br.read());  //encoded writing
+                    fos.write((char) c);     // writing characters
+                    //System.out.print((char) c);  //printing characters
+                }
             }
-            fos.close();
         }
         catch (IOException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
+            System.out.println("Try checking your internet connection.");
+
         }
+
 
 
         //now gson handling
@@ -55,8 +61,11 @@ public class fetchIndiaLatest
             System.out.println("India Total Active: " + india.getIndiaActive() + "\n");
 
             indiaLatest.latestData.stateWise[] states = response.data.regional; // array of states
+            int i=0;
             for(indiaLatest.latestData.stateWise state: states)
             {
+                i++;
+                System.out.println(i);
                 System.out.println("Name: "+state.loc);
                 System.out.println(("Total cases: " + state.totalConfirmed));
                 System.out.println("Active cases: " + state.getActive() + "\n");
@@ -65,8 +74,8 @@ public class fetchIndiaLatest
 
             //indiaLatest.latestData
         }
-        catch (MalformedURLException e) {
-            e.printStackTrace();
+        catch (IOException e) {
+            //e.printStackTrace();
         }
 
 
