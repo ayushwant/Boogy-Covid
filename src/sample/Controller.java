@@ -86,6 +86,7 @@ public class Controller implements Initializable {
 
     @FXML
     void newsListener(ActionEvent actionEvent){
+
         Stage stage= (Stage) newsBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -97,7 +98,7 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root));
     }
     @FXML
-     public void symanaListener(ActionEvent event){
+    public void symanaListener(ActionEvent event){
         Stage stage= (Stage) symptomBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -110,6 +111,13 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        try {
+            fetchIndiaLatest.main(null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -125,7 +133,7 @@ public class Controller implements Initializable {
                     active = indiaT.getIndiaActive();
                     death= indiaT.deaths;
                     recovered= indiaT.discharged;
-                    timestamp=response.lastRefreshed;
+                    timestamp=response.getLastRefreshed();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -144,9 +152,7 @@ public class Controller implements Initializable {
                         timestampLbl.setText("Last updated : "+finalT);
                     }
                 });
-
             }
-
         }).start();
     }
 }

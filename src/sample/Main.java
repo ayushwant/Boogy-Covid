@@ -16,17 +16,7 @@ public class Main extends Application {
         primaryStage.setTitle("TRACK A COV");
         primaryStage.setScene(new Scene(root, 700, 700));
         primaryStage.show();
-        
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    fetchIndiaLatest.main(null);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+
         new Thread(new Runnable() {
             @Override
             public void run() {

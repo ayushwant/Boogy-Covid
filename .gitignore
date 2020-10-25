@@ -1,4 +1,4 @@
-*.class 
+*.class
 gson_2_8_6.xml
 .idea/
 *.json
