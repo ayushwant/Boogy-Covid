@@ -11,20 +11,14 @@ import java.util.Calendar;
 
 public class fetchNews
 {
-
     public static void main(String[] args)
     {
+
         Calendar calendar = Calendar.getInstance();
 
         String toDate = calendar.get(Calendar.YEAR) +"-" +calendar.get(Calendar.MONTH) +"-" +calendar.get(Calendar.DATE);
-        String fromDate = toDate;
-        System.out.println(toDate +"  " +fromDate);
 
-
-        //String searchUrl = "http://newsapi.org/v2/everything?q=covid&from=2020-10-16&to=2020-10-16" +
-        //       "&sortBy=popularity&apiKey=40b7f5be4e1d455e8c4c1b2420e5d404";
-        String searchUrl = "http://newsapi.org/v2/everything?q=covid&from=" +fromDate +"&to=" +toDate
-                +"&sortBy=popularity&apiKey=40b7f5be4e1d455e8c4c1b2420e5d404";
+        String searchUrl = "http://newsapi.org/v2/everything?q=covid&from=2020-10-16&to="+toDate+"&sortBy=popularity&apiKey=40b7f5be4e1d455e8c4c1b2420e5d404";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         // creating and writing to file
@@ -40,14 +34,12 @@ public class fetchNews
             int c;
             while((c=br.read())!=-1) // write to file
             {
-                fos.write(br.read());
-                //fos.write((char) c);
-                //System.out.print((char) c);
+                fos.write((char) c);
             }
             fos.close();
         }
         catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred in news api data fetching ");
             e.printStackTrace();
         }
 
@@ -63,22 +55,10 @@ public class fetchNews
 
             covidNews.allArticles[] arts = news.articles;
 
-            for(covidNews.allArticles art : arts)
-            {
-                //covidNews.allArticles.source = news.articles.;
-                System.out.println("Title: " + art.title);
-                System.out.println("url: " + art.url);
-                System.out.println(art.description);
-                System.out.println();
-            }
-
-
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
