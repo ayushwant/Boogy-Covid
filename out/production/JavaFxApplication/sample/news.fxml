@@ -36,7 +36,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn1" layoutX="322.0" layoutY="44.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn1" layoutX="322.0" layoutY="44.0" mnemonicParsing="false" onAction="#link1" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -49,7 +49,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn8" layoutX="320.0" layoutY="594.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn8" layoutX="320.0" layoutY="594.0" mnemonicParsing="false" onAction="#link8" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -62,7 +62,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn7" layoutX="319.0" layoutY="521.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn7" layoutX="319.0" layoutY="521.0" mnemonicParsing="false" onAction="#link7" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -75,7 +75,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn6" layoutX="321.0" layoutY="436.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn6" layoutX="321.0" layoutY="436.0" mnemonicParsing="false" onAction="#link6" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -88,7 +88,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn5" layoutX="321.0" layoutY="359.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn5" layoutX="321.0" layoutY="359.0" mnemonicParsing="false" onAction="#link5" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -101,7 +101,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn4" layoutX="321.0" layoutY="282.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn4" layoutX="321.0" layoutY="282.0" mnemonicParsing="false" onAction="#link4" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -114,7 +114,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn3" layoutX="322.0" layoutY="201.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn3" layoutX="322.0" layoutY="201.0" mnemonicParsing="false" onAction="#link3" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -127,7 +127,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn2" layoutX="322.0" layoutY="122.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn2" layoutX="322.0" layoutY="122.0" mnemonicParsing="false" onAction="#link2" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -140,7 +140,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn9" layoutX="319.0" layoutY="679.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn9" layoutX="319.0" layoutY="679.0" mnemonicParsing="false" onAction="#link9" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -153,7 +153,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn10" layoutX="319.0" layoutY="755.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn10" layoutX="319.0" layoutY="755.0" mnemonicParsing="false" onAction="#link10" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -166,7 +166,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn11" layoutX="319.0" layoutY="840.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn11" layoutX="319.0" layoutY="840.0" mnemonicParsing="false" onAction="#link11" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -179,7 +179,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn12" layoutX="319.0" layoutY="923.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn12" layoutX="319.0" layoutY="923.0" mnemonicParsing="false" onAction="#link12" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -192,7 +192,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn13" layoutX="319.0" layoutY="1006.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn13" layoutX="319.0" layoutY="1006.0" mnemonicParsing="false" onAction="#link13" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -205,7 +205,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn14" layoutX="319.0" layoutY="1099.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn14" layoutX="319.0" layoutY="1099.0" mnemonicParsing="false" onAction="#link14" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -218,7 +218,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn15" layoutX="319.0" layoutY="1187.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn15" layoutX="319.0" layoutY="1187.0" mnemonicParsing="false" onAction="#link15" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -231,7 +231,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn16" layoutX="319.0" layoutY="1263.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn16" layoutX="319.0" layoutY="1263.0" mnemonicParsing="false" onAction="#link16" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -244,7 +244,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn17" layoutX="319.0" layoutY="1348.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn17" layoutX="319.0" layoutY="1348.0" mnemonicParsing="false" onAction="#link17" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -257,7 +257,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn18" layoutX="319.0" layoutY="1431.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn18" layoutX="319.0" layoutY="1431.0" mnemonicParsing="false" onAction="#link18" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -270,7 +270,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn19" layoutX="319.0" layoutY="1514.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn19" layoutX="319.0" layoutY="1514.0" mnemonicParsing="false" onAction="#link19" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -283,7 +283,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="readBtn20" layoutX="319.0" layoutY="1607.0" mnemonicParsing="false" text="Read " textFill="#0523f5">
+                  <Button fx:id="readBtn20" layoutX="319.0" layoutY="1607.0" mnemonicParsing="false" onAction="#link20" text="Read " textFill="#0523f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

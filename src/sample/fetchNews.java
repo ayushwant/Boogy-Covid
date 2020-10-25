@@ -25,18 +25,22 @@ public class fetchNews
         try
         {
             File myFile = new File("newsJSON.json");
-            FileOutputStream fos = new FileOutputStream("newsJSON.json");
 
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            int c;
-            while((c=br.read())!=-1) // write to file
+            if(urlcon.getConnectTimeout()==0)  // to check if network established
             {
-                fos.write((char) c);
+                FileOutputStream fos = new FileOutputStream("newsJSON.json");
+
+                int c;
+                while ((c = br.read()) != -1) // write to file
+                {
+                    fos.write((char) c);     // writing characters
+                }
+                fos.close();
             }
-            fos.close();
         }
         catch (IOException e) {
             System.out.println("An error occurred in news api data fetching ");
@@ -51,7 +55,7 @@ public class fetchNews
 
             covidNews news = gson.fromJson(br, covidNews.class);
 
-            System.out.println("Total results: " + news.totalResults);
+            System.out.println("Total news results: " + news.totalResults);
 
             covidNews.allArticles[] arts = news.articles;
 
