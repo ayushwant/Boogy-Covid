@@ -13,10 +13,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -85,6 +88,89 @@ public class News implements Initializable {
     public Button readBtn20;
     public Button saveBtn20;
 
+    Desktop d=Desktop.getDesktop();
+
+    @FXML
+    void link1(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[0]));
+    }
+    @FXML
+    void link2(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[1]));
+    }
+    @FXML
+    void link3(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[2]));
+    }
+    @FXML
+    void link4(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[3]));
+    }
+    @FXML
+    void link5(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[4]));
+    }
+    @FXML
+    void link6(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[5]));
+    }
+    @FXML
+    void link7(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[6]));
+    }
+    @FXML
+    void link8(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[7]));
+    }
+    @FXML
+    void link9(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[8]));
+    }
+    @FXML
+    void link10(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[9]));
+    }
+    @FXML
+    void link11(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[10]));
+    }
+    @FXML
+    void link12(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[11]));
+    }
+    @FXML
+    void link13(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[12]));
+    }
+    @FXML
+    void link14(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[13]));
+    }
+    @FXML
+    void link15(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[14]));
+    }
+    @FXML
+    void link16(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[15]));
+    }
+    @FXML
+    void link17(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[16]));
+    }
+    @FXML
+    void link18(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[17]));
+    }
+    @FXML
+    void link19(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[18]));
+    }
+    @FXML
+    void link20(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[19]));
+    }
+
     String headline[]=new String[20];
     String link[]=new String[20];
 
@@ -115,7 +201,7 @@ public class News implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        fetchNews.main(null);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -163,11 +249,11 @@ public class News implements Initializable {
             }
         }).start();
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                fetchNews.main(null);
-            }
-        }).start();
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                fetchNews.main(null);
+//            }
+//        }).start();
     }
 }
