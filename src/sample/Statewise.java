@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +18,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -25,6 +29,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class Statewise implements Initializable {
     @FXML
@@ -35,7 +40,6 @@ public class Statewise implements Initializable {
     int activecase[]=new int[36];
     int recovercases[]=new int[36];
     int deathcase[]=new int[36];
-    String x;
 
     @FXML
     private TableView<stateData> tbl;
@@ -49,6 +53,8 @@ public class Statewise implements Initializable {
     private TableColumn<stateData,Integer> recovered_col;
     @FXML
     private TableColumn<stateData,Integer> deaths_col;
+    @FXML
+    private TextField searchBox;
 
     @FXML
     private void backListenerS(ActionEvent event){
@@ -72,6 +78,9 @@ public class Statewise implements Initializable {
         }
         stage.setScene(new Scene(root));
     }
+
+    ObservableList statesList = FXCollections.observableArrayList();
+    FilteredList filter=new FilteredList(statesList,e->true);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -108,54 +117,12 @@ public class Statewise implements Initializable {
                     e.printStackTrace();
                 }
 
-                ObservableList statesList = FXCollections.observableArrayList();
-
                 for(int i=0; i<36; i++)
                 {
                     statesList.add(new stateData(statename[i],
                             confirmcase[i], activecase[i], recovercases[i], deathcase[i] ) );
                 }
 
-
-
-            /*    ObservableList list= FXCollections.observableArrayList(
-                        new stateData(statename[0],confirmcase[0],activecase[0],recovercases[0],deathcase[0]),
-                        new stateData(statename[1],confirmcase[1],activecase[1],recovercases[1],deathcase[1]),
-                        new stateData(statename[2],confirmcase[2],activecase[2],recovercases[2],deathcase[2]),
-                        new stateData(statename[3],confirmcase[3],activecase[3],recovercases[3],deathcase[3]),
-                        new stateData(statename[4],confirmcase[4],activecase[4],recovercases[4],deathcase[4]),
-                        new stateData(statename[5],confirmcase[5],activecase[5],recovercases[5],deathcase[5]),
-                        new stateData(statename[6],confirmcase[6],activecase[6],recovercases[6],deathcase[6]),
-                        new stateData(statename[7],confirmcase[7],activecase[7],recovercases[7],deathcase[7]),
-                        new stateData(statename[8],confirmcase[8],activecase[8],recovercases[8],deathcase[8]),
-                        new stateData(statename[9],confirmcase[9],activecase[9],recovercases[9],deathcase[9]),
-                        new stateData(statename[10],confirmcase[10],activecase[10],recovercases[10],deathcase[10]),
-                        new stateData(statename[11],confirmcase[11],activecase[11],recovercases[11],deathcase[11]),
-                        new stateData(statename[12],confirmcase[12],activecase[12],recovercases[12],deathcase[12]),
-                        new stateData(statename[13],confirmcase[13],activecase[13],recovercases[13],deathcase[13]),
-                        new stateData(statename[14],confirmcase[14],activecase[14],recovercases[14],deathcase[14]),
-                        new stateData(statename[15],confirmcase[15],activecase[15],recovercases[15],deathcase[15]),
-                        new stateData(statename[16],confirmcase[16],activecase[16],recovercases[16],deathcase[16]),
-                        new stateData(statename[17],confirmcase[17],activecase[17],recovercases[17],deathcase[17]),
-                        new stateData(statename[18],confirmcase[18],activecase[18],recovercases[18],deathcase[18]),
-                        new stateData(statename[19],confirmcase[19],activecase[19],recovercases[19],deathcase[19]),
-                        new stateData(statename[20],confirmcase[20],activecase[20],recovercases[20],deathcase[20]),
-                        new stateData(statename[21],confirmcase[21],activecase[21],recovercases[21],deathcase[21]),
-                        new stateData(statename[22],confirmcase[22],activecase[22],recovercases[22],deathcase[22]),
-                        new stateData(statename[23],confirmcase[23],activecase[23],recovercases[23],deathcase[23]),
-                        new stateData(statename[24],confirmcase[24],activecase[24],recovercases[24],deathcase[24]),
-                        new stateData(statename[25],confirmcase[25],activecase[25],recovercases[25],deathcase[25]),
-                        new stateData(statename[26],confirmcase[26],activecase[26],recovercases[26],deathcase[26]),
-                        new stateData(statename[27],confirmcase[27],activecase[27],recovercases[27],deathcase[27]),
-                        new stateData(statename[28],confirmcase[28],activecase[28],recovercases[28],deathcase[28]),
-                        new stateData(statename[29],confirmcase[29],activecase[29],recovercases[29],deathcase[29]),
-                        new stateData(statename[30],confirmcase[30],activecase[30],recovercases[30],deathcase[30]),
-                        new stateData(statename[31],confirmcase[31],activecase[31],recovercases[31],deathcase[31]),
-                        new stateData(statename[32],confirmcase[32],activecase[32],recovercases[32],deathcase[32]),
-                        new stateData(statename[33],confirmcase[33],activecase[33],recovercases[33],deathcase[33]),
-                        new stateData(statename[34],confirmcase[34],activecase[34],recovercases[34],deathcase[34]),
-                        new stateData(statename[35],confirmcase[35],activecase[35],recovercases[35],deathcase[35])
-                );*/
                 stateName_col.setCellValueFactory(new PropertyValueFactory<>("stateName"));
                 confirmed_col.setCellValueFactory(new PropertyValueFactory<>("confirmed"));
                 active_col.setCellValueFactory(new PropertyValueFactory<>("active"));
@@ -165,6 +132,29 @@ public class Statewise implements Initializable {
                 tbl.setItems(statesList);
             }
         }).start();
+    }
+
+    @FXML
+    private void searchListener(KeyEvent event){
+
+        searchBox.textProperty().addListener((observable,oldValue,newValue)->{
+
+            filter.setPredicate((Predicate<? super stateData>) (stateData std)->{
+
+                if(newValue.isEmpty() || newValue==null){
+                    return true;
+                }
+                else if(std.getStateName().contains(newValue)){
+                    return  true;
+                }
+
+                return false;
+            });
+        });
+
+        SortedList sort=new SortedList(filter);
+        sort.comparatorProperty().bind(tbl.comparatorProperty());
+        tbl.setItems(sort);
     }
 
     public  class stateData{
