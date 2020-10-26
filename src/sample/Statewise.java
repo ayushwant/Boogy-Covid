@@ -108,7 +108,17 @@ public class Statewise implements Initializable {
                     e.printStackTrace();
                 }
 
-                ObservableList list= FXCollections.observableArrayList(
+                ObservableList statesList = FXCollections.observableArrayList();
+
+                for(int i=0; i<36; i++)
+                {
+                    statesList.add(new stateData(statename[i],
+                            confirmcase[i], activecase[i], recovercases[i], deathcase[i] ) );
+                }
+
+
+
+            /*    ObservableList list= FXCollections.observableArrayList(
                         new stateData(statename[0],confirmcase[0],activecase[0],recovercases[0],deathcase[0]),
                         new stateData(statename[1],confirmcase[1],activecase[1],recovercases[1],deathcase[1]),
                         new stateData(statename[2],confirmcase[2],activecase[2],recovercases[2],deathcase[2]),
@@ -145,14 +155,14 @@ public class Statewise implements Initializable {
                         new stateData(statename[33],confirmcase[33],activecase[33],recovercases[33],deathcase[33]),
                         new stateData(statename[34],confirmcase[34],activecase[34],recovercases[34],deathcase[34]),
                         new stateData(statename[35],confirmcase[35],activecase[35],recovercases[35],deathcase[35])
-                );
+                );*/
                 stateName_col.setCellValueFactory(new PropertyValueFactory<>("stateName"));
                 confirmed_col.setCellValueFactory(new PropertyValueFactory<>("confirmed"));
                 active_col.setCellValueFactory(new PropertyValueFactory<>("active"));
                 recovered_col.setCellValueFactory(new PropertyValueFactory<>("recovered"));
                 deaths_col.setCellValueFactory(new PropertyValueFactory<>("deaths"));
 
-                tbl.setItems(list);
+                tbl.setItems(statesList);
             }
         }).start();
     }
