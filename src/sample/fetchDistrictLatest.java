@@ -30,7 +30,7 @@ public class fetchDistrictLatest
                 int c;
                 while ((c = br.read()) != -1) // write to file
                 {
-                    fos.write(br.read());
+                    fos.write((char)c);
                     //System.out.print((char) c);
                 }
             }

@@ -1,21 +1,20 @@
 package sample;
 
-public class indiaLatest {
+public class indiaHistory
+{
     boolean success;
     String lastRefreshed;
     String lastOriginUpdate;
-    latestData data;
+    datewiseHistory[] data;
 
-    public String getLastRefreshed() {
-        return lastRefreshed;
-    }
+    public class datewiseHistory
+    {
+        String day;
+        indiaThisDay summary;
+        statesThisDay[] regional;
 
-    public class latestData {
-        officialSummary summary;
-        unofficialSum[] unofficialSummary;
-        stateWise[] regional;
-
-        public class officialSummary {
+        public class indiaThisDay
+        {
             int total;
             int confirmedCasesIndian;
             int confirmedCasesForeign;
@@ -28,15 +27,8 @@ public class indiaLatest {
             }
         }
 
-        public class unofficialSum {
-            String source;
-            int total;
-            int recovered;
-            int deaths;
-            int active;
-        }
-
-        public class stateWise {
+        public class statesThisDay
+        {
             String loc;
             int confirmedCasesIndian;
             int confirmedCasesForeign;
@@ -47,22 +39,10 @@ public class indiaLatest {
             public int getActive() {
                 return totalConfirmed - discharged - deaths;
             }
+
         }
 
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
