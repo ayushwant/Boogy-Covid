@@ -27,7 +27,8 @@ public class fetchWorldLatest
             int c;
             while((c=br.read())!=-1) // write to file
             {
-                fos.write(br.read());
+                //fos.write(br.read());
+                fos.write((char) c);
                 //System.out.print((char) c);
             }
             fos.close();
@@ -58,12 +59,14 @@ public class fetchWorldLatest
             }*/
 
             // for entire world data, we have to add all the stats from each country
+            int number=0;
             for(worldLatest country : response)
             {
+                System.out.println(++number);
                 System.out.println("Country: " + country.country);
                 System.out.println("Infected: " +country.infected);
                 //System.out.println("Total recovered: " +country.getRecovered());
-                //System.out.println("Total active: "+ country.getActive());
+                //System.out.println("Total active: "+ country.getActive()); // getActive kaam ni kar raha abhi.
                 System.out.println();
             }
 

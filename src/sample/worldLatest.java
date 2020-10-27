@@ -16,13 +16,17 @@ public class worldLatest
 
         //when using this method, it shows this error
         //java.lang.Double cannot be cast to java.lang.Integer
-        public int getActive()
+        // active cases ko lite lo filhal
+        public Integer getActive()
         {
-            return (
-                    ((Integer)infected).intValue()
+                Integer active = (Integer) ( ((Integer)infected).intValue() - ((Integer)recovered).intValue() - ((Integer)deceased).intValue() );
+
+            /*return (
+                    (Integer)(((Integer)infected).intValue()
                             - ((Integer)recovered).intValue()
                             - ((Integer)deceased).intValue()
-            );
+            )); */
+                return (Integer) active.intValue();
         }
 
 }
