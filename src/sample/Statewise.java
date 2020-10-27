@@ -144,7 +144,7 @@ public class Statewise implements Initializable {
                 if(newValue.isEmpty() || newValue==null){
                     return true;
                 }
-                else if(std.getStateName().contains(newValue)){
+                else if(std.getStateName().toLowerCase().contains(newValue.toLowerCase())){
                     return  true;
                 }
 

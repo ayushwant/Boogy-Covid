@@ -37,7 +37,7 @@
             <TableColumn fx:id="deaths_col" editable="false" prefWidth="84.0" text="DEATHS" />
         </columns>
       </TableView>
-      <TextField fx:id="searchBox" layoutX="14.0" layoutY="73.0" onKeyTyped="#searchListener" prefHeight="25.0" prefWidth="251.0" promptText="search state name">
+      <TextField fx:id="searchBox" layoutX="14.0" layoutY="73.0" onKeyPressed="#searchListener" prefHeight="25.0" prefWidth="251.0" promptText="search state name">
          <font>
             <Font size="14.0" />
          </font>
