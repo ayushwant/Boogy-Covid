@@ -23,33 +23,23 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Controller implements Initializable {
-    @FXML
-    public Button advisoryBtn;
-    public Button refreshBtnM;
-    public Button stateBtn;
-    public Label comfirmLbl;
-    public Label activeLbl;
-    public Label recoverLbl;
-    public Label deathLbl;
-    public Label timestampLbl;
-    public Button newsBtn;
-    public Button symptomBtn;
-
-    Desktop d=Desktop.getDesktop();
 
     @FXML
     private ResourceBundle resources;
 
+    Desktop d=Desktop.getDesktop();
     @FXML
-    void whoListener(ActionEvent event) throws URISyntaxException, IOException {
+    private void whoListener(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI("https://www.who.int"));
     }
     @FXML
-    void indianGovernmentListener(ActionEvent event) throws URISyntaxException, IOException {
+    private void indianGovernmentListener(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI("https://www.mygov.in/covid-19"));
     }
+
+    @FXML private Button advisoryBtn;
     @FXML
-    void advisoryListener(ActionEvent event){
+    private void advisoryListener(ActionEvent event){
         Stage stage= (Stage) advisoryBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -59,8 +49,10 @@ public class Controller implements Initializable {
         }
         stage.setScene(new Scene(root, 700, 700));
     }
+
+    @FXML private Button refreshBtnM;
     @FXML
-    void refreshListener(ActionEvent actionEvent){
+    private void refreshListener(ActionEvent actionEvent){
         System.out.println("refreshing data");
         Stage stage= (Stage) refreshBtnM.getScene().getWindow();
         Parent root = null;
@@ -72,8 +64,9 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root));
     }
 
+    @FXML private Button stateBtn;
     @FXML
-    void stateListener(ActionEvent actionEvent){
+    private void stateListener(ActionEvent actionEvent){
         Stage stage= (Stage) stateBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -84,8 +77,9 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root));
     }
 
+    @FXML private Button newsBtn;
     @FXML
-    void newsListener(ActionEvent actionEvent){
+    private void newsListener(ActionEvent actionEvent){
 
         Stage stage= (Stage) newsBtn.getScene().getWindow();
         Parent root = null;
@@ -97,8 +91,10 @@ public class Controller implements Initializable {
         }
         stage.setScene(new Scene(root));
     }
+
+    @FXML private Button symptomBtn;
     @FXML
-    public void symanaListener(ActionEvent event){
+    private void symanaListener(ActionEvent event){
         Stage stage= (Stage) symptomBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -109,6 +105,24 @@ public class Controller implements Initializable {
         stage.setScene(new Scene(root, 700, 700));
     }
 
+    @FXML private Button worldBtn;
+    @FXML
+    private void worldListener(ActionEvent event){
+        Stage stage= (Stage) symptomBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("countrywise.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root));
+    }
+
+    @FXML private Label comfirmLbl;
+    @FXML private Label activeLbl;
+    @FXML private Label recoverLbl;
+    @FXML private Label deathLbl;
+    @FXML private Label timestampLbl;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

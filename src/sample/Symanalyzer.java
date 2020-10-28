@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,26 +13,25 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Symanalyzer {
-    public Button backBtnSA;
-    public RadioButton rbYes1A;
-    public RadioButton rbYes1B;
-    public RadioButton rbYes1C;
-    public RadioButton rbYes1D;
-    public RadioButton rbYes2;
-    public RadioButton rbYes3;
-    public RadioButton rbNo1A;
-    public RadioButton rbNo1B;
-    public RadioButton rbNo1C;
-    public RadioButton rbNo1D;
-    public RadioButton rbNo2;
-    public RadioButton rbNo3;
-    public Label resultLbl;
-    public Button resetBtnm;
+    @FXML private RadioButton rbYes1A;
+    @FXML private RadioButton rbYes1B;
+    @FXML private RadioButton rbYes1C;
+    @FXML private RadioButton rbYes1D;
+    @FXML private RadioButton rbYes2;
+    @FXML private RadioButton rbYes3;
+    @FXML private RadioButton rbNo1A;
+    @FXML private RadioButton rbNo1B;
+    @FXML private RadioButton rbNo1C;
+    @FXML private RadioButton rbNo1D;
+    @FXML private RadioButton rbNo2;
+    @FXML private RadioButton rbNo3;
+    @FXML private Label resultLbl;
 
-
-    public void resetListener(ActionEvent actionEvent){
-        System.out.println("reset data : true " );
-        Stage stage= (Stage) resetBtnm.getScene().getWindow();
+    @FXML private Button resetBtn;
+    @FXML
+    private void resetListener(ActionEvent actionEvent){
+        System.out.println("reseting data ");
+        Stage stage= (Stage) resetBtn.getScene().getWindow();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("symanalyzer.fxml"));
@@ -40,7 +40,10 @@ public class Symanalyzer {
         }
         stage.setScene(new Scene(root));
     }
-    public void backlistenerSA(ActionEvent event){
+
+    @FXML private Button backBtnSA;
+    @FXML
+    private void backlistenerSA(ActionEvent event){
         Stage stage= (Stage) backBtnSA.getScene().getWindow();
         Parent root = null;
         try {
@@ -50,7 +53,9 @@ public class Symanalyzer {
         }
         stage.setScene(new Scene(root));
     }
-    public void radioSelect(ActionEvent event){
+
+    @FXML
+    private void radioSelect(ActionEvent event){
         String message ="";
         int chanceper =0;
 

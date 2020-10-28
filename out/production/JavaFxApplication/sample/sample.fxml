@@ -22,7 +22,7 @@
    <children>
       <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="700.0">
          <children>
-            <AnchorPane layoutY="47.0" prefHeight="154.0" prefWidth="700.0" style="-fx-background-color: #c996b8;">
+            <AnchorPane layoutY="47.0" prefHeight="227.0" prefWidth="700.0" style="-fx-background-color: #c996b8;">
                <children>
                   <Label contentDisplay="CENTER" layoutX="93.0" layoutY="70.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
                      <font>
@@ -72,14 +72,22 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="refreshBtnM" layoutX="636.0" layoutY="-3.0" mnemonicParsing="false" onAction="#refreshListener" text="REFRESH">
+                  <Button fx:id="refreshBtnM" layoutX="627.0" layoutY="-3.0" mnemonicParsing="false" onAction="#refreshListener" prefHeight="31.0" prefWidth="74.0" style="-fx-border-color: red; -fx-border-width: 3;" text="REFRESH">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
                   <Label fx:id="timestampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="47.0" prefHeight="17.0" prefWidth="217.0" text="Label" textAlignment="CENTER" />
+                  <Button fx:id="worldBtn" alignment="CENTER" layoutX="305.0" layoutY="178.0" mnemonicParsing="false" onAction="#worldListener" style="-fx-border-color: BLACK; -fx-border-width: 3;" text="WORLD DATA" textFill="#cc380e">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="202.0" prefHeight="316.0" prefWidth="700.0" style="-fx-background-color: yellow;">
+            <AnchorPane layoutY="274.0" prefHeight="316.0" prefWidth="700.0" style="-fx-background-color: yellow;">
                <children>
                   <ImageView fitHeight="291.0" fitWidth="370.0" layoutX="180.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -95,21 +103,21 @@
                      </cursor></Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="524.0" prefHeight="176.0" prefWidth="700.0" style="-fx-background-color: #008eff;">
+            <AnchorPane layoutY="596.0" prefHeight="104.0" prefWidth="700.0" style="-fx-background-color: #008eff;">
                <children>
-                  <Label alignment="CENTER" layoutX="255.0" layoutY="1.0" prefHeight="27.0" prefWidth="191.0" text="FOR MORE INFORMATION" textFill="#141414">
+                  <Label alignment="CENTER" layoutX="263.0" prefHeight="27.0" prefWidth="191.0" text="FOR MORE INFORMATION" textFill="#141414">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button contentDisplay="CENTER" layoutX="316.0" layoutY="36.0" mnemonicParsing="false" onAction="#whoListener" text="WHO SITE" textFill="#400df8">
+                  <Button contentDisplay="CENTER" layoutX="214.0" layoutY="34.0" mnemonicParsing="false" onAction="#whoListener" style="-fx-border-width: 2; -fx-border-color: black;" text="WHO SITE" textFill="#400df8">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button contentDisplay="CENTER" layoutX="258.0" layoutY="69.0" mnemonicParsing="false" onAction="#indianGovernmentListener" text="GOVERNMENT OF INDIA SITE" textFill="#3009f5">
+                  <Button contentDisplay="CENTER" layoutX="159.0" layoutY="68.0" mnemonicParsing="false" onAction="#indianGovernmentListener" style="-fx-border-width: 2; -fx-border-color: black;" text="GOVERNMENT OF INDIA SITE" textFill="#3009f5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -117,14 +125,14 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="newsBtn" layoutX="306.0" layoutY="103.0" mnemonicParsing="false" onAction="#newsListener" text="LATEST NEWS" textFill="RED">
+                  <Button fx:id="newsBtn" layoutX="428.0" layoutY="34.0" mnemonicParsing="false" onAction="#newsListener" style="-fx-border-width: 2; -fx-border-color: black;" text="LATEST NEWS" textFill="RED">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="advisoryBtn" layoutX="294.0" layoutY="137.0" mnemonicParsing="false" onAction="#advisoryListener" text="ADVISORY &amp; HELP" textFill="#08b52d">
+                  <Button fx:id="advisoryBtn" layoutX="415.0" layoutY="68.0" mnemonicParsing="false" onAction="#advisoryListener" style="-fx-border-width: 2; -fx-border-color: black;" text="ADVISORY &amp; HELP" textFill="#08b52d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

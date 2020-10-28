@@ -239,6 +239,9 @@
                 </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="resetBtnm" layoutX="310.0" layoutY="673.0" mnemonicParsing="false" onAction="#resetListener" prefHeight="11.0" prefWidth="48.0" text="RESET" textFill="#ff0000" />
+      <Button fx:id="resetBtn" layoutX="310.0" layoutY="673.0" mnemonicParsing="false" onAction="#resetListener" prefHeight="11.0" prefWidth="48.0" text="RESET" textFill="#ff0000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
     </children>
 </AnchorPane>

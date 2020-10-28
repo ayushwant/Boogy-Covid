@@ -38,7 +38,6 @@ public class fetchIndiaLatest
         catch (IOException e) {
             System.out.println("An error occurred in fetchIndiaLatest.java");
             System.out.println("Try checking your internet connection.");
-
         }
 
         //now gson handling

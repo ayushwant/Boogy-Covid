@@ -32,14 +32,11 @@ import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
 public class Statewise implements Initializable {
-    @FXML
-    private Button backBtnS;
-    public Button refreshBtnS;
-    String statename[]=new String[36];
-    int confirmcase[]=new int[36];
-    int activecase[]=new int[36];
-    int recovercases[]=new int[36];
-    int deathcase[]=new int[36];
+    @FXML private String statename[]=new String[36];
+    @FXML private int confirmcase[]=new int[36];
+    @FXML private int activecase[]=new int[36];
+    @FXML private int recovercases[]=new int[36];
+    @FXML private int deathcase[]=new int[36];
 
     @FXML
     private TableView<stateData> tbl;
@@ -53,9 +50,8 @@ public class Statewise implements Initializable {
     private TableColumn<stateData,Integer> recovered_col;
     @FXML
     private TableColumn<stateData,Integer> deaths_col;
-    @FXML
-    private TextField searchBox;
 
+    @FXML private Button backBtnS;
     @FXML
     private void backListenerS(ActionEvent event){
         Stage stage= (Stage) backBtnS.getScene().getWindow();
@@ -67,6 +63,8 @@ public class Statewise implements Initializable {
         }
         stage.setScene(new Scene(root));
     }
+
+    @FXML private Button refreshBtnS;
     public void refeshListenerS(ActionEvent event){
         System.out.println("refreshing data");
         Stage stage= (Stage) refreshBtnS.getScene().getWindow();
@@ -79,8 +77,8 @@ public class Statewise implements Initializable {
         stage.setScene(new Scene(root));
     }
 
-    ObservableList statesList = FXCollections.observableArrayList();
-    FilteredList filter=new FilteredList(statesList,e->true);
+    @FXML private ObservableList statesList = FXCollections.observableArrayList();
+    @FXML private FilteredList filter=new FilteredList(statesList,e->true);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -134,6 +132,7 @@ public class Statewise implements Initializable {
         }).start();
     }
 
+    @FXML private TextField searchBox;
     @FXML
     private void searchListener(KeyEvent event){
 
