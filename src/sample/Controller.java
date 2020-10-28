@@ -34,11 +34,25 @@ public class Controller implements Initializable {
     public Label timestampLbl;
     public Button newsBtn;
     public Button symptomBtn;
+    public Button indiaHistoricalButton;
 
     Desktop d=Desktop.getDesktop();
 
     @FXML
     private ResourceBundle resources;
+
+    @FXML
+    void indiaHistoricalListener(ActionEvent event)
+    {
+        Stage stage= (Stage) indiaHistoricalButton.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("indiaHistoricalFXML.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 700, 700));
+    }
 
     @FXML
     void whoListener(ActionEvent event) throws URISyntaxException, IOException {
