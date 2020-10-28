@@ -11,27 +11,28 @@ public class fetchWorldLatest
 {
     public static void main(String[] args) throws IOException
     {
-        String searchUrl = "https://api.apify.com/v2/key-value-stores/" +
-                "tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true";
+        String searchUrl = "https://api.covid19api.com/summary";
 
         // creating and writing to file
         try
         {
             File myFile = new File("worldLatestJSON.json");
-            FileOutputStream fos = new FileOutputStream("worldLatestJSON.json");
 
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            int c;
-            while((c=br.read())!=-1) // write to file
+            if(urlcon.getConnectTimeout()==0)  // to check if network established
             {
-                //fos.write(br.read());
-                fos.write((char) c);
-                //System.out.print((char) c);
+                FileOutputStream fos = new FileOutputStream("worldLatestJSON.json");
+
+                int c;
+                while ((c = br.read()) != -1) // write to file
+                {
+                    fos.write((char) c);
+                    //System.out.print((char) c);
+                }
             }
-            fos.close();
         }
         catch (IOException e) {
             System.out.println("An error occurred.");
@@ -47,24 +48,31 @@ public class fetchWorldLatest
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            worldLatest[] response = gson.fromJson(br, worldLatest[].class);
+            worldLatest response = gson.fromJson(br, worldLatest.class);
 
-            // for entire world data, we can add all the stats from each country
-            int number=0;
-            for(worldLatest country : response)
+            System.out.println("Date:" +response.Date);
+            worldLatest.GlobalData worldData = response.Global;
+
+            System.out.println("World Data: ");
+            System.out.println("Total confirmed: "  +worldData.TotalConfirmed);
+
+            worldLatest.CountryWiseData[] countries = response.Countries;
+            System.out.println("Country wise Data:");
+            for(worldLatest.CountryWiseData country : countries)
             {
-                System.out.println(++number);
-                System.out.println("Country: " + country.country);
-                System.out.println("Infected: " +country.infected);
-                //System.out.println("Total recovered: " +country.getRecovered());
-                //System.out.println("Total active: "+ country.getActive()); // getActive kaam ni kar raha abhi.
+                System.out.println("Country: " +country.Country);
+                System.out.println("Total Confirmed: " +country.TotalConfirmed);
                 System.out.println();
             }
+
+
+
 
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
 
     }
