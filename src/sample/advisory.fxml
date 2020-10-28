@@ -85,7 +85,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="backBtnA" layoutX="337.0" layoutY="98.0" mnemonicParsing="false" onAction="#backlistenerA" prefHeight="29.0" prefWidth="54.0" text="BACK">
+            <Button fx:id="backBtnA" layoutX="338.0" layoutY="93.0" mnemonicParsing="false" onAction="#backlistenerA" prefHeight="29.0" prefWidth="54.0" style="-fx-border-color: red; -fx-border-width: 2;" text="BACK">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

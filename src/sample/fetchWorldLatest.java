@@ -18,26 +18,26 @@ public class fetchWorldLatest
         try
         {
             File myFile = new File("worldLatestJSON.json");
-            FileOutputStream fos = new FileOutputStream("worldLatestJSON.json");
 
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
-            int c;
-            while((c=br.read())!=-1) // write to file
+            if(urlcon.getConnectTimeout()==0)  // to check if network established
             {
-                //fos.write(br.read());
-                fos.write((char) c);
-                //System.out.print((char) c);
+                int c;
+                FileOutputStream fos = new FileOutputStream("worldLatestJSON.json");
+                while ((c = br.read()) != -1) // write to file
+                {
+                    fos.write((char) c);
+                }
+                fos.close();
             }
-            fos.close();
         }
         catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred or not connected to internet");
             e.printStackTrace();
         }
-
 
         //now gson handling
         Gson gson = new GsonBuilder().create();
@@ -60,8 +60,6 @@ public class fetchWorldLatest
                 //System.out.println("Total active: "+ country.getActive()); // getActive kaam ni kar raha abhi.
                 System.out.println();
             }
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }

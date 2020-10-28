@@ -24,69 +24,47 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class News implements Initializable {
-    @FXML
-    public Button refreshBtnN;
-    public Button backBtnN;
-    public TextField tf1;
-    public Button readBtn1;
-    public Button saveBtn1;
-    public TextField tf2;
-    public Button readBtn2;
-    public Button saveBtn2;
-    public TextField tf3;
-    public Button readBtn3;
-    public Button saveBtn3;
-    public TextField tf4;
-    public Button readBtn4;
-    public Button saveBtn4;
-    public TextField tf5;
-    public Button readBtn5;
-    public Button saveBtn5;
-    public TextField tf6;
-    public Button readBtn6;
-    public Button saveBtn6;
-    public TextField tf7;
-    public Button readBtn7;
-    public Button saveBtn7;
-    public TextField tf8;
-    public Button readBtn8;
-    public Button saveBtn8;
-    public TextField tf9;
-    public Button readBtn9;
-    public Button saveBtn9;
-    public TextField tf10;
-    public Button readBtn10;
-    public Button saveBtn10;
-    public TextField tf11;
-    public Button readBtn11;
-    public Button saveBtn11;
-    public TextField tf12;
-    public Button readBtn12;
-    public Button saveBtn12;
-    public TextField tf13;
-    public Button readBtn13;
-    public Button saveBtn13;
-    public TextField tf14;
-    public Button readBtn14;
-    public Button saveBtn14;
-    public TextField tf15;
-    public Button readBtn15;
-    public Button saveBtn15;
-    public TextField tf16;
-    public Button readBtn16;
-    public Button saveBtn16;
-    public TextField tf17;
-    public Button readBtn17;
-    public Button saveBtn17;
-    public TextField tf18;
-    public Button readBtn18;
-    public Button saveBtn18;
-    public TextField tf19;
-    public Button readBtn19;
-    public Button saveBtn19;
-    public TextField tf20;
-    public Button readBtn20;
-    public Button saveBtn20;
+
+    @FXML private TextField tf1;
+    @FXML private Button saveBtn1;
+    @FXML private TextField tf2;
+    @FXML private Button saveBtn2;
+    @FXML private TextField tf3;
+    @FXML private Button saveBtn3;
+    @FXML private TextField tf4;
+    @FXML private Button saveBtn4;
+    @FXML private TextField tf5;
+    @FXML private Button saveBtn5;
+    @FXML private TextField tf6;
+    @FXML private Button saveBtn6;
+    @FXML private TextField tf7;
+    @FXML private Button saveBtn7;
+    @FXML private TextField tf8;
+    @FXML private Button saveBtn8;
+    @FXML private TextField tf9;
+    @FXML private Button saveBtn9;
+    @FXML private TextField tf10;
+    @FXML private Button saveBtn10;
+    @FXML private TextField tf11;
+    @FXML private Button saveBtn11;
+    @FXML private TextField tf12;
+    @FXML private Button saveBtn12;
+    @FXML private TextField tf13;
+    @FXML private Button saveBtn13;
+    @FXML private TextField tf14;
+    @FXML private Button saveBtn14;
+    @FXML private TextField tf15;
+    @FXML private Button saveBtn15;
+    @FXML private TextField tf16;
+    @FXML private Button saveBtn16;
+    @FXML private TextField tf17;
+    @FXML private Button saveBtn17;
+    @FXML private TextField tf18;
+    @FXML private Button saveBtn18;
+    @FXML private TextField tf19;
+    @FXML private Button saveBtn19;
+    @FXML private TextField tf20;
+    @FXML private Button saveBtn20;
 
     Desktop d=Desktop.getDesktop();
 
@@ -171,9 +149,10 @@ public class News implements Initializable {
         d.browse(new URI(link[19]));
     }
 
-    String headline[]=new String[20];
-    String link[]=new String[20];
+    @FXML private String headline[]=new String[20];
+    @FXML private String link[]=new String[20];
 
+    @FXML private Button refreshBtnN;
     @FXML
     void refreshListenerN(ActionEvent event){
         System.out.println("refreshing news");
@@ -187,6 +166,7 @@ public class News implements Initializable {
         stage.setScene(new Scene(root,700,700));
     }
 
+    @FXML private Button backBtnN;
     @FXML
     void backListenerN(ActionEvent event){
         Stage stage= (Stage) backBtnN.getScene().getWindow();
@@ -248,12 +228,5 @@ public class News implements Initializable {
                 });
             }
         }).start();
-
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                fetchNews.main(null);
-//            }
-//        }).start();
     }
 }
