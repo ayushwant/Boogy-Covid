@@ -14,13 +14,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class News implements Initializable {
@@ -68,35 +67,85 @@ public class News implements Initializable {
 
     Desktop d=Desktop.getDesktop();
 
+    //String savedNews = "Saved News";
+    HashMap<String, String> saved = new HashMap<String, String>();
+    File file = new File("savedNews.txt");
+    //if(file.exists())
+    FileWriter fileWriter = new FileWriter(file.getName(),true);
+
+    public News() throws IOException {
+    }
+
+
     @FXML
     void link1(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[0]));
     }
-    //@FXML
+    @FXML
+    void save1(ActionEvent event){
+        //saved.put(tf1.getText(),link[0]);
+        try{
+            BufferedWriter bf = new BufferedWriter(fileWriter);
+            bf.write(tf1.getText() +"\n" +link[0] +"\n\n");
+            bf.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void link2(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[1]));
     }
+
+    @FXML
+    void save2(ActionEvent event){
+        saved.put(tf2.getText(),link[1]);
+    }
+
     @FXML
     void link3(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[2]));
     }
+
+    @FXML
+    void save3(ActionEvent event){
+        saved.put(tf3.getText(),link[2]);
+    }
     @FXML
     void link4(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[3]));
+    }
+
+    @FXML
+    void save4(ActionEvent event){
+        saved.put(tf4.getText(),link[3]);
     }
     @FXML
     void link5(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[4]));
     }
     @FXML
+    void save5(ActionEvent event){
+        saved.put(tf5.getText(),link[4]);
+    }
+
+    @FXML
     void link6(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[5]));
     }
     @FXML
+    void save6(ActionEvent event){
+        saved.put(tf6.getText(),link[5]);
+    }
+
+    @FXML
     void link7(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[6]));
+    }
+    @FXML
+    void save7(ActionEvent event){
+        saved.put(tf7.getText(),link[6]);
     }
     @FXML
     void link8(ActionEvent event) throws URISyntaxException, IOException {
@@ -230,5 +279,20 @@ public class News implements Initializable {
                 });
             }
         }).start();
+
+        /*//File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+
     }
 }
