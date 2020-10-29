@@ -47,54 +47,7 @@ public class fetchIndiaHistory {
             indiaHistory response = gson.fromJson(br, indiaHistory.class);
 
             System.out.println("Success: " + response.success);
-            System.out.println("Last refreshed: " + response.lastRefreshed);
-
-            indiaHistory.datewiseHistory[] allDatesData = response.data;
-
-        /*    for(indiaHistory.datewiseHistory  eachDateData : allDatesData)
-            {
-                System.out.println("Date: " +eachDateData.day);
-                indiaHistory.datewiseHistory.indiaThisDay indiaEachDate = eachDateData.summary;
-                System.out.println("India total: " +indiaEachDate.total);
-                System.out.println("India deaths: " +indiaEachDate.deaths);
-                indiaHistory.datewiseHistory.statesThisDay[] allStatesEachDate = eachDateData.regional;
-                for( indiaHistory.datewiseHistory.statesThisDay state : allStatesEachDate )
-                {
-                    System.out.println("Location: " +state.loc);
-                    System.out.println("Confirmed cases: " +state.totalConfirmed);
-                    System.out.println();
-                }
-                System.out.println("-----------------------");
-                System.out.println();
-            } */
-
-//            String date = "2020-06-10";
-//            for(indiaHistory.datewiseHistory  eachDateData : allDatesData)
-//            {
-//                if(eachDateData.day.equals(date))
-//                {
-//                    System.out.println("Date: " +eachDateData.day);
-//
-//                    indiaHistory.datewiseHistory.indiaThisDay indiaEachDate = eachDateData.summary;
-//                    System.out.println("India total: " +indiaEachDate.total);
-//                    System.out.println("India deaths: " +indiaEachDate.deaths);
-//
-//                    indiaHistory.datewiseHistory.statesThisDay[] allStatesEachDate = eachDateData.regional;
-//
-//                    for( indiaHistory.datewiseHistory.statesThisDay state : allStatesEachDate )
-//                    {
-//                        System.out.println("Location: " +state.loc);
-//                        System.out.println("Confirmed cases: " +state.totalConfirmed);
-//                        System.out.println();
-//                    }
-//
-//                    System.out.println("-----------------------");
-//                    System.out.println();
-//                }
-//
-//            }
-
-
+           
         }
         catch (MalformedURLException e) { e.printStackTrace(); }
         catch (IOException e) { e.printStackTrace(); }
