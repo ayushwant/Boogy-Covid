@@ -37,17 +37,16 @@ public class fetchIndiaHistory {
         catch (IOException e) {
             System.out.println("An error occurred.");
             System.out.println("Try checking your internet connection."); }
-
         //now gson handling
         try {
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
+
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
 
             indiaHistory response = gson.fromJson(br, indiaHistory.class);
 
             System.out.println("Success: " + response.success);
-           
         }
         catch (MalformedURLException e) { e.printStackTrace(); }
         catch (IOException e) { e.printStackTrace(); }
