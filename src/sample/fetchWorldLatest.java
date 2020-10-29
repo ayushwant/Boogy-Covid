@@ -58,17 +58,14 @@ public class fetchWorldLatest
 
             worldLatest.CountryWiseData[] countries = response.Countries;
             System.out.println("Country wise Data:");
+            int num=0;
             for(worldLatest.CountryWiseData country : countries)
             {
+                System.out.println(++num);
                 System.out.println("Country: " +country.Country);
                 System.out.println("Total Confirmed: " +country.TotalConfirmed);
                 System.out.println();
             }
-
-
-
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
