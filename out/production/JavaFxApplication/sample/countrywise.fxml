@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Countrywise">
    <children>
       <Label alignment="CENTER" layoutX="227.0" prefHeight="45.0" prefWidth="246.0" text="WORLD COVID DATA" textFill="#d73c09">
@@ -32,6 +31,9 @@
             <TableColumn editable="false" prefWidth="86.0" style="-fx-border-color: yellow; -fx-border-width: 3;" text="DEATHS" />
         </columns>
       </TableView>
-      <Button fx:id="backBtn" layoutX="324.0" layoutY="672.0" mnemonicParsing="false" onAction="#backListener" style="-fx-border-color: #d73c09; -fx-border-width: 3;" text="BACK" />
+      <Button fx:id="backBtn" layoutX="324.0" layoutY="672.0" mnemonicParsing="false" onAction="#backListener" style="-fx-border-color: #d73c09; -fx-border-width: 3;" text="BACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </AnchorPane>

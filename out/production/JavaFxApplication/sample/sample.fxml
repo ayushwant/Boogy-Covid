@@ -22,7 +22,7 @@
    <children>
       <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="700.0">
          <children>
-            <AnchorPane layoutY="47.0" prefHeight="227.0" prefWidth="700.0" style="-fx-background-color: #c996b8;">
+            <AnchorPane layoutY="45.0" prefHeight="229.0" prefWidth="701.0" style="-fx-background-color: #c996b8;">
                <children>
                   <Label contentDisplay="CENTER" layoutX="93.0" layoutY="70.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
                      <font>
@@ -77,7 +77,15 @@
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
                   <Label fx:id="timestampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="47.0" prefHeight="17.0" prefWidth="217.0" text="Label" textAlignment="CENTER" />
-                  <Button fx:id="worldBtn" alignment="CENTER" layoutX="305.0" layoutY="178.0" mnemonicParsing="false" onAction="#worldListener" style="-fx-border-color: BLACK; -fx-border-width: 3;" text="WORLD DATA" textFill="#cc380e">
+                  <Button fx:id="worldBtn" alignment="CENTER" layoutX="390.0" layoutY="179.0" mnemonicParsing="false" onAction="#worldListener" style="-fx-border-color: BLACK; -fx-border-width: 3;" text="WORLD DATA" textFill="#cc380e">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="historicalBtn" alignment="CENTER" layoutX="200.0" layoutY="179.0" mnemonicParsing="false" onAction="#historicalListener" style="-fx-border-color: BLACK; -fx-border-width: 3;" text="HISTORICAL  DATA" textFill="#ff035d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
