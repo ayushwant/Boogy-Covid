@@ -44,25 +44,7 @@ public class fetchNews
             }
         }
         catch (IOException e) {
-            System.out.println("An error occurred in news api data fetching ");
-            e.printStackTrace();
-        }
-
-        //now gson handling
-        try {
-            URL url = new URL(searchUrl);
-            URLConnection urlcon = url.openConnection();
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
-
-            covidNews news = gson.fromJson(br, covidNews.class);
-
-            System.out.println("Total news results: " + news.totalResults);
-
-            covidNews.allArticles[] arts = news.articles;
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            System.out.println("An error occurred in fetchNews.java ");
             e.printStackTrace();
         }
     }

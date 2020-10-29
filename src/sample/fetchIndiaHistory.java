@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -35,8 +34,10 @@ public class fetchIndiaHistory {
             }
         }
         catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred in fetchIndiaHistory.java");
             System.out.println("Try checking your internet connection."); }
+<<<<<<< HEAD
+=======
         //now gson handling
         try {
             URL url = new URL(searchUrl);
@@ -50,6 +51,7 @@ public class fetchIndiaHistory {
         }
         catch (MalformedURLException e) { e.printStackTrace(); }
         catch (IOException e) { e.printStackTrace(); }
+>>>>>>> 4c3c3315acef488021913866385b766a462602f8
     }
 
 }

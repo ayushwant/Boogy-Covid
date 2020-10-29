@@ -39,23 +39,5 @@ public class fetchIndiaLatest
             System.out.println("An error occurred in fetchIndiaLatest.java");
             System.out.println("Try checking your internet connection.");
         }
-
-        //now gson handling
-        try {
-            URL url = new URL(searchUrl);
-            URLConnection urlcon = url.openConnection();
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
-
-            indiaLatest response = gson.fromJson(br, indiaLatest.class); // created response object
-
-            indiaLatest.latestData.officialSummary india = response.data.summary; // LHS: class names; RHS: object names
-            System.out.println(("Total cases: " + india.total));
-
-            indiaLatest.latestData.stateWise[] states = response.data.regional; // array of states
-
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

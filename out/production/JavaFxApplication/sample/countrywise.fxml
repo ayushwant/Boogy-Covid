@@ -16,24 +16,69 @@
             <Font name="Algerian" size="26.0" />
          </font>
       </Label>
-      <Button fx:id="refreshBtn" layoutX="630.0" layoutY="55.0" mnemonicParsing="false" onAction="#refreshListener" style="-fx-border-color: #d73c09; -fx-border-width: 3;" text="Refresh">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <TextField layoutX="14.0" layoutY="52.0" prefHeight="25.0" prefWidth="194.0" promptText="search country name" style="-fx-border-color: blue; -fx-border-width: 3;" />
-      <TableView layoutY="100.0" prefHeight="572.0" prefWidth="700.0">
+      <TableView fx:id="tbl" layoutY="173.0" prefHeight="499.0" prefWidth="703.0">
         <columns>
-          <TableColumn editable="false" prefWidth="348.0" style="-fx-border-color: black; -fx-border-width: 3;" text="COUNTRY" />
-          <TableColumn editable="false" prefWidth="83.0" style="-fx-border-color: red; -fx-border-width: 3;" text="CONFIRMED" />
-            <TableColumn editable="false" prefWidth="91.0" style="-fx-border-color: blue; -fx-border-width: 3;" text="ACTIVE" />
-            <TableColumn editable="false" prefWidth="91.0" style="-fx-border-color: green; -fx-border-width: 3;" text="RECOVERED" />
-            <TableColumn editable="false" prefWidth="86.0" style="-fx-border-color: yellow; -fx-border-width: 3;" text="DEATHS" />
+          <TableColumn fx:id="countryName_col" editable="false" prefWidth="334.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-weight: bold;" text="COUNTRY" />
+          <TableColumn fx:id="confirmed_col" editable="false" prefWidth="88.0" style="-fx-border-color: red; -fx-alignment: center; -fx-font-weight: bold; -fx-text-fill: red;" text="CONFIRMED" />
+            <TableColumn fx:id="active_col" editable="false" prefWidth="89.0" style="-fx-border-color: blue; -fx-alignment: center; -fx-font-weight: bold; -fx-text-fill: blue;" text="ACTIVE" />
+            <TableColumn fx:id="recovered_col" editable="false" prefWidth="87.0" style="-fx-border-color: green; -fx-alignment: center; -fx-font-weight: bold; -fx-text-fill: green;" text="RECOVERED" />
+            <TableColumn fx:id="deaths_col" editable="false" prefWidth="88.0" style="-fx-border-color: yellow; -fx-alignment: center; -fx-font-weight: bold; -fx-text-fill: #ffbb00;" text="DEATHS" />
         </columns>
       </TableView>
       <Button fx:id="backBtn" layoutX="324.0" layoutY="672.0" mnemonicParsing="false" onAction="#backListener" style="-fx-border-color: #d73c09; -fx-border-width: 3;" text="BACK">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
+      <AnchorPane layoutY="45.0" prefHeight="128.0" prefWidth="703.0" style="-fx-background-color: #c996b8; -fx-text-fill: black;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="95.0" layoutY="39.0" prefHeight="17.0" prefWidth="76.0" text="CONFIRMED" textFill="RED">
+               <font>
+                  <Font name="Bauhaus 93" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="399.0" layoutY="40.0" text="RECOVERED" textFill="#22b549">
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="558.0" layoutY="40.0" text="DEATHS" textFill="YELLOW">
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="255.0" layoutY="40.0" text=" ACTIVE " textFill="#008eff">
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="confirmLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="64.0" prefHeight="17.0" prefWidth="82.0" text="Label">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="activeLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="64.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="recoverLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="399.0" layoutY="65.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="deathLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="546.0" layoutY="65.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBox" layoutX="228.0" layoutY="98.0" onKeyPressed="#searchListener" prefHeight="25.0" prefWidth="239.0" promptText="search state" style="-fx-border-color: blue;" />
+            <Label fx:id="timeStampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="15.0" prefHeight="17.0" prefWidth="317.0" text="Label" />
+            <Button fx:id="refreshBtn" layoutX="641.0" layoutY="-1.0" mnemonicParsing="false" onAction="#refreshListener" style="-fx-border-color: #d73c09; -fx-border-width: 3;" text="Refresh">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
