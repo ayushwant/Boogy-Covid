@@ -49,7 +49,7 @@ public class fetchNews
         }
 
         //now gson handling
-        try {
+    /*    try {
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
@@ -64,6 +64,6 @@ public class fetchNews
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        } */
     }
 }

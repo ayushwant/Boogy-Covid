@@ -40,7 +40,7 @@ public class fetchIndiaLatest
             System.out.println("Try checking your internet connection.");
         }
 
-        //now gson handling
+    /*    //now gson handling
         try {
             URL url = new URL(searchUrl);
             URLConnection urlcon = url.openConnection();
@@ -56,6 +56,6 @@ public class fetchIndiaLatest
         }
         catch (IOException e) {
             e.printStackTrace();
-        }
+        }  */
     }
 }

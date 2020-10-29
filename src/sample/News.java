@@ -72,6 +72,8 @@ public class News implements Initializable {
     void link1(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[0]));
     }
+    //@FXML
+
     @FXML
     void link2(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[1]));
