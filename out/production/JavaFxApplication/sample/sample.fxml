@@ -88,6 +88,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
                   <Button fx:id="indiaHistoricalButton" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#indiaHistoricalListener" text="India Historical Data" />
+                  <Button fx:id="graphBtn" layoutX="69.0" layoutY="86.0" mnemonicParsing="false" onAction="#graphListener" text="Graphical" />
                </children>
             </AnchorPane>
             <AnchorPane layoutY="524.0" prefHeight="176.0" prefWidth="700.0" style="-fx-background-color: #008eff;">

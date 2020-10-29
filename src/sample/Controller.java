@@ -16,6 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -35,11 +36,27 @@ public class Controller implements Initializable {
     public Button newsBtn;
     public Button symptomBtn;
     public Button indiaHistoricalButton;
+    public Button graphBtn;
 
     Desktop d=Desktop.getDesktop();
 
     @FXML
     private ResourceBundle resources;
+
+    @FXML
+    void graphListener(ActionEvent event)
+    {
+        Stage stage = (Stage) graphBtn.getScene().getWindow();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("BarGraph.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 700, 700));
+
+    }
 
     @FXML
     void indiaHistoricalListener(ActionEvent event)
