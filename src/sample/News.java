@@ -14,13 +14,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class News implements Initializable {
@@ -65,89 +64,216 @@ public class News implements Initializable {
     @FXML private Button saveBtn19;
     @FXML private TextField tf20;
     @FXML private Button saveBtn20;
+    @FXML private Button saveAll;
 
     Desktop d=Desktop.getDesktop();
+
+    HashMap<String, String> saved = new HashMap<String, String>();
+
+    public News() throws IOException {
+    }
+
+    @FXML
+    void saveAllListener(ActionEvent event)
+    {
+        File file = new File("savedNews.txt");
+
+
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void link1(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[0]));
     }
     @FXML
+    void save1(ActionEvent event){
+        saved.put(tf1.getText(), link[0]);
+    }
+
+    @FXML
     void link2(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[1]));
     }
+
+    @FXML
+    void save2(ActionEvent event){
+        saved.put(tf2.getText(), link[1]);
+    }
+
     @FXML
     void link3(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[2]));
     }
+
+    @FXML
+    void save3(ActionEvent event){
+        saved.put(tf3.getText(), link[2]);
+    }
     @FXML
     void link4(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[3]));
+    }
+
+    @FXML
+    void save4(ActionEvent event){
+        saved.put(tf4.getText(), link[3]);
     }
     @FXML
     void link5(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[4]));
     }
     @FXML
+    void save5(ActionEvent event){
+        saved.put(tf5.getText(),link[4]);
+    }
+
+    @FXML
     void link6(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[5]));
     }
     @FXML
+    void save6(ActionEvent event){
+        saved.put(tf6.getText(),link[5]);
+    }
+
+    @FXML
     void link7(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[6]));
+    }
+    @FXML
+    void save7(ActionEvent event){
+        saved.put(tf7.getText(),link[6]);
     }
     @FXML
     void link8(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[7]));
     }
     @FXML
+    void save8(ActionEvent event){
+        saved.put(tf8.getText(),link[7]);
+    }
+
+    @FXML
     void link9(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[8]));
     }
+    @FXML
+    void save9(ActionEvent event){
+        saved.put(tf9.getText(),link[8]);
+    }
+
     @FXML
     void link10(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[9]));
     }
     @FXML
+    void save10(ActionEvent event){
+        saved.put(tf10.getText(),link[9]);
+    }
+
+    @FXML
     void link11(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[10]));
     }
+    @FXML
+    void save11(ActionEvent event){
+        saved.put(tf11.getText(),link[10]);
+    }
+
     @FXML
     void link12(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[11]));
     }
     @FXML
+    void save12(ActionEvent event){
+        saved.put(tf12.getText(),link[11]);
+    }
+
+    @FXML
     void link13(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[12]));
     }
+    @FXML
+    void save13(ActionEvent event){
+        saved.put(tf13.getText(),link[12]);
+    }
+
     @FXML
     void link14(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[13]));
     }
     @FXML
+    void save14(ActionEvent event){
+        saved.put(tf14.getText(),link[13]);
+    }
+
+    @FXML
     void link15(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[14]));
     }
+    @FXML
+    void save15(ActionEvent event){
+        saved.put(tf15.getText(),link[14]);
+    }
+
     @FXML
     void link16(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[15]));
     }
     @FXML
+    void save16(ActionEvent event){
+        saved.put(tf16.getText(),link[15]);
+    }
+
+    @FXML
     void link17(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[16]));
     }
+    @FXML
+    void save17(ActionEvent event){
+        saved.put(tf17.getText(),link[16]);
+    }
+
     @FXML
     void link18(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[17]));
     }
     @FXML
+    void save18(ActionEvent event){
+        saved.put(tf18.getText(),link[17]);
+    }
+
+    @FXML
     void link19(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[18]));
     }
     @FXML
+    void save19(ActionEvent event){
+        saved.put(tf19.getText(),link[18]);
+    }
+
+    @FXML
     void link20(ActionEvent event) throws URISyntaxException, IOException {
         d.browse(new URI(link[19]));
     }
+    @FXML
+    void save20(ActionEvent event){
+        saved.put(tf20.getText(),link[19]);
+    }
+
 
     @FXML private String headline[]=new String[20];
     @FXML private String link[]=new String[20];
