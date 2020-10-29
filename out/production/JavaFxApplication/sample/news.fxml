@@ -31,7 +31,7 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1634.0" prefWidth="686.0">
                <children>
-                  <TextField fx:id="tf1" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="14.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf1" editable="false" layoutX="-1.0" layoutY="14.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -44,7 +44,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf8" alignment="CENTER" editable="false" layoutY="564.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf8" editable="false" layoutY="564.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -57,7 +57,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf7" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="491.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf7" editable="false" layoutX="-1.0" layoutY="491.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -70,7 +70,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf6" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="406.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf6" editable="false" layoutX="-1.0" layoutY="406.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -83,7 +83,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf5" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="329.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf5" editable="false" layoutX="-1.0" layoutY="329.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -96,7 +96,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf4" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="252.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf4" editable="false" layoutX="-1.0" layoutY="252.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -109,7 +109,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf3" alignment="CENTER" editable="false" layoutY="171.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf3" editable="false" layoutY="171.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -122,7 +122,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf2" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="92.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf2" editable="false" layoutX="-1.0" layoutY="92.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -135,7 +135,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf9" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="649.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf9" editable="false" layoutX="-1.0" layoutY="649.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -148,7 +148,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf10" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="725.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf10" editable="false" layoutX="-1.0" layoutY="725.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -161,7 +161,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf11" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="810.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf11" editable="false" layoutX="-1.0" layoutY="810.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -174,7 +174,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf12" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="893.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf12" editable="false" layoutX="-1.0" layoutY="893.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -187,7 +187,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf13" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="976.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf13" editable="false" layoutX="-1.0" layoutY="976.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -200,7 +200,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf14" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1069.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf14" editable="false" layoutX="-1.0" layoutY="1069.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -213,7 +213,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf15" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1157.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf15" editable="false" layoutX="-1.0" layoutY="1157.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -226,7 +226,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf16" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1233.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf16" editable="false" layoutX="-1.0" layoutY="1233.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -239,7 +239,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf17" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1318.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf17" editable="false" layoutX="-1.0" layoutY="1318.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -252,7 +252,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf18" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1401.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf18" editable="false" layoutX="-1.0" layoutY="1401.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -265,7 +265,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf19" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1484.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf19" editable="false" layoutX="-1.0" layoutY="1484.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -278,7 +278,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="tf20" alignment="CENTER" editable="false" layoutX="-1.0" layoutY="1577.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
+                  <TextField fx:id="tf20" editable="false" layoutX="-1.0" layoutY="1577.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: no;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

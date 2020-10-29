@@ -76,7 +76,7 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Label fx:id="timestampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="47.0" prefHeight="17.0" prefWidth="217.0" text="Label" textAlignment="CENTER" />
+                  <Label fx:id="timestampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="34.0" prefHeight="17.0" prefWidth="265.0" text="Label" textAlignment="CENTER" />
                   <Button fx:id="worldBtn" alignment="CENTER" layoutX="390.0" layoutY="179.0" mnemonicParsing="false" onAction="#worldListener" style="-fx-border-color: BLACK; -fx-border-width: 3;" text="WORLD DATA" textFill="#cc380e">
                      <font>
                         <Font name="System Bold" size="12.0" />
