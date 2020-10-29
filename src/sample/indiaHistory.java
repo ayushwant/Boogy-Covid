@@ -1,7 +1,6 @@
 package sample;
 
-public class indiaHistory
-{
+public class indiaHistory {
     boolean success;
     String lastRefreshed;
     String lastOriginUpdate;
@@ -39,10 +38,6 @@ public class indiaHistory
             public int getActive() {
                 return totalConfirmed - discharged - deaths;
             }
-
         }
-
-
     }
-
 }

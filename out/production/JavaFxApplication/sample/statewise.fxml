@@ -33,7 +33,7 @@
             <TableColumn fx:id="deaths_col" editable="false" prefWidth="88.0" style="-fx-alignment: center; -fx-text-fill: #ffbb00; -fx-font-weight: bold; -fx-border-color: yellow;" text="DEATHS" />
         </columns>
       </TableView>
-      <TextField fx:id="searchBox" layoutX="14.0" layoutY="65.0" onKeyPressed="#searchListener" prefHeight="25.0" prefWidth="251.0" promptText="search state name" style="-fx-border-color: blue; -fx-border-width: 2;">
+      <TextField fx:id="searchBox" layoutX="14.0" layoutY="65.0" onKeyPressed="#searchListener" prefHeight="25.0" prefWidth="251.0" promptText="search state name" style="-fx-border-color: blue;">
          <font>
             <Font size="14.0" />
          </font>

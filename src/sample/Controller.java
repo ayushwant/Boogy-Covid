@@ -117,6 +117,19 @@ public class Controller implements Initializable {
         }
         stage.setScene(new Scene(root));
     }
+    
+    @FXML private Button historicalBtn;
+    @FXML
+    private void historicalListener(ActionEvent event){
+        Stage stage= (Stage) historicalBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("dateWise.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root));
+    }
 
     @FXML private Label comfirmLbl;
     @FXML private Label activeLbl;

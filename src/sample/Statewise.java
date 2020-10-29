@@ -65,7 +65,7 @@ public class Statewise implements Initializable {
     }
 
     @FXML private Button refreshBtnS;
-    public void refeshListenerS(ActionEvent event){
+    @FXML private void refeshListenerS(ActionEvent event){
         System.out.println("refreshing data");
         Stage stage= (Stage) refreshBtnS.getScene().getWindow();
         Parent root = null;
@@ -93,14 +93,9 @@ public class Statewise implements Initializable {
             @Override
             public void run() {
                 Gson gson = new GsonBuilder().create();
-                int confirmed=0,active=0,death=0,recovered=0;
-                String timestamp=null;
                 try {
                     BufferedReader br = new BufferedReader(new FileReader("indiaLatestJSON.json"));
                     indiaLatest response = gson.fromJson(br, indiaLatest.class);
-                    System.out.println("read file successfully : " + response.success);
-                    indiaLatest.latestData.officialSummary indiaT = response.data.summary;
-                    //timestamp=response.getLastRefreshed();
                     indiaLatest.latestData.stateWise[] states=response.data.regional;
                     int i=0;
                     for(indiaLatest.latestData.stateWise state: states){
@@ -115,10 +110,14 @@ public class Statewise implements Initializable {
                     e.printStackTrace();
                 }
 
-                for(int i=0; i<36; i++)
+                int i=0;
+                for(String states : statename)
                 {
-                    statesList.add(new stateData(statename[i],
-                            confirmcase[i], activecase[i], recovercases[i], deathcase[i] ) );
+                    if(statename[i]!=null) {
+                        statesList.add(new stateData(statename[i],
+                                confirmcase[i], activecase[i], recovercases[i], deathcase[i]));
+                    }
+                    i++;
                 }
 
                 stateName_col.setCellValueFactory(new PropertyValueFactory<>("stateName"));
@@ -156,7 +155,7 @@ public class Statewise implements Initializable {
         tbl.setItems(sort);
     }
 
-    public  class stateData{
+    public static class stateData{
         SimpleStringProperty stateName;
         SimpleIntegerProperty confirmed;
         SimpleIntegerProperty active;
