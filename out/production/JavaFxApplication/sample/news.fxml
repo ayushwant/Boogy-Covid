@@ -18,6 +18,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
+            <Button fx:id="saveAll" layoutX="504.0" layoutY="13.0" mnemonicParsing="false" onAction="#saveAllListener" text="Save all" />
          </children>
       </AnchorPane>
       <Button fx:id="backBtnN" layoutX="350.0" layoutY="674.0" mnemonicParsing="false" onAction="#backListenerN" style="-fx-border-color: red;" text="BACK">
@@ -296,7 +297,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn8" layoutX="384.0" layoutY="594.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn8" layoutX="384.0" layoutY="594.0" mnemonicParsing="false" onAction="#save8" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -304,7 +305,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn7" layoutX="383.0" layoutY="521.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn7" layoutX="383.0" layoutY="521.0" mnemonicParsing="false" onAction="#save7" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -312,7 +313,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn6" layoutX="385.0" layoutY="436.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn6" layoutX="385.0" layoutY="436.0" mnemonicParsing="false" onAction="#save6" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -320,7 +321,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn5" layoutX="385.0" layoutY="359.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn5" layoutX="385.0" layoutY="359.0" mnemonicParsing="false" onAction="#save5" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -328,7 +329,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn4" layoutX="385.0" layoutY="282.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn4" layoutX="385.0" layoutY="282.0" mnemonicParsing="false" onAction="#save4" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -336,7 +337,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn3" layoutX="386.0" layoutY="201.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn3" layoutX="386.0" layoutY="201.0" mnemonicParsing="false" onAction="#save3" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -344,7 +345,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn2" layoutX="386.0" layoutY="122.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn2" layoutX="386.0" layoutY="122.0" mnemonicParsing="false" onAction="#save2" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -352,7 +353,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn9" layoutX="383.0" layoutY="679.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn9" layoutX="383.0" layoutY="679.0" mnemonicParsing="false" onAction="#save9" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -360,7 +361,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn10" layoutX="383.0" layoutY="755.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn10" layoutX="383.0" layoutY="755.0" mnemonicParsing="false" onAction="#save10" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -368,7 +369,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn11" layoutX="383.0" layoutY="840.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn11" layoutX="383.0" layoutY="840.0" mnemonicParsing="false" onAction="#save11" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -376,7 +377,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn12" layoutX="383.0" layoutY="923.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn12" layoutX="383.0" layoutY="923.0" mnemonicParsing="false" onAction="#save12" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -384,7 +385,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn13" layoutX="383.0" layoutY="1006.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn13" layoutX="383.0" layoutY="1006.0" mnemonicParsing="false" onAction="#save13" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -392,7 +393,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn14" layoutX="383.0" layoutY="1099.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn14" layoutX="383.0" layoutY="1099.0" mnemonicParsing="false" onAction="#save14" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -400,7 +401,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn15" layoutX="383.0" layoutY="1187.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn15" layoutX="383.0" layoutY="1187.0" mnemonicParsing="false" onAction="#save15" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -408,7 +409,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn16" layoutX="383.0" layoutY="1263.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn16" layoutX="383.0" layoutY="1263.0" mnemonicParsing="false" onAction="#save16" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -416,7 +417,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn17" layoutX="383.0" layoutY="1348.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn17" layoutX="383.0" layoutY="1348.0" mnemonicParsing="false" onAction="#save17" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -424,7 +425,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn18" layoutX="383.0" layoutY="1431.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn18" layoutX="383.0" layoutY="1431.0" mnemonicParsing="false" onAction="#save18" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -432,7 +433,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn19" layoutX="383.0" layoutY="1514.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn19" layoutX="383.0" layoutY="1514.0" mnemonicParsing="false" onAction="#save19" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -440,7 +441,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="saveBtn20" layoutX="383.0" layoutY="1607.0" mnemonicParsing="false" text="Save" textFill="#069029">
+                  <Button fx:id="saveBtn20" layoutX="383.0" layoutY="1607.0" mnemonicParsing="false" onAction="#save20" text="Save" textFill="#069029">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
