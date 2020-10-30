@@ -9,11 +9,11 @@
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<ScrollPane prefHeight="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RecoverGraph">
+<ScrollPane prefHeight="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RecoverGraph">
     <content>
-        <AnchorPane prefHeight="700.0" prefWidth="1500.0">
+        <AnchorPane prefHeight="800.0" prefWidth="1500.0">
             <children>
-                <BarChart fx:id="barChart" horizontalGridLinesVisible="false" layoutX="8.0" layoutY="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="635.0" prefWidth="1450.0" title="RECOVERED CASES GRAPH">
+                <BarChart fx:id="barChart" horizontalGridLinesVisible="false" layoutX="8.0" layoutY="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="739.0" prefWidth="1450.0" title="RECOVERED CASES GRAPH">
                     <xAxis>
                         <CategoryAxis label="STATES" side="BOTTOM" tickLabelFill="#191818" fx:id="xAxis">
                             <effect>
@@ -28,7 +28,7 @@
                         <InnerShadow choke="0.26" color="#1bef03" height="30.53" radius="15.9575" width="35.3" />
                     </effect>
                 </BarChart>
-                <Button fx:id="backBtnR" layoutX="716.0" layoutY="660.0" mnemonicParsing="false" onAction="#backListenerR" text="BACK" textFill="#111010">
+                <Button fx:id="backBtnR" layoutX="721.0" layoutY="760.0" mnemonicParsing="false" onAction="#backListenerR" text="BACK" textFill="#111010">
                     <effect>
                         <InnerShadow color="#1bef03" height="28.15" radius="15.362499999999999" width="35.3" />
                     </effect>

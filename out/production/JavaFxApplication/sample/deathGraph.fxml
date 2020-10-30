@@ -9,11 +9,11 @@
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<ScrollPane prefHeight="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeathGraph">
+<ScrollPane prefHeight="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeathGraph">
     <content>
-        <AnchorPane prefHeight="700.0" prefWidth="1500.0">
+        <AnchorPane prefHeight="800.0" prefWidth="1500.0">
             <children>
-                <BarChart fx:id="barChart" horizontalGridLinesVisible="false" layoutX="8.0" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="638.0" prefWidth="1450.0" title="DEATH CASES GRAPH">
+                <BarChart fx:id="barChart" horizontalGridLinesVisible="false" layoutX="8.0" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="739.0" prefWidth="1450.0" title="DEATH CASES GRAPH">
                     <xAxis>
                         <CategoryAxis label="STATES" side="BOTTOM" tickLabelFill="#191818" fx:id="xAxis">
                             <effect>
@@ -28,7 +28,7 @@
                         <InnerShadow choke="0.26" color="#ff9d00" height="32.92" radius="16.555" width="35.3" />
                     </effect>
                 </BarChart>
-                <Button fx:id="backBtnD" layoutX="715.0" layoutY="660.0" mnemonicParsing="false" onAction="#backListenerD" text="BACK" textFill="#161616">
+                <Button fx:id="backBtnD" layoutX="717.0" layoutY="760.0" mnemonicParsing="false" onAction="#backListenerD" text="BACK" textFill="#161616">
                     <effect>
                         <InnerShadow color="#ff9d00" height="33.52" radius="16.705" width="35.3" />
                     </effect>

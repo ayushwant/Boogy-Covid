@@ -10,12 +10,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<ScrollPane prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AllComparisionChart">
+<ScrollPane prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AllComparisionChart">
    <content>
-      <AnchorPane prefHeight="700.0" prefWidth="1500.0">
+      <AnchorPane prefHeight="800.0" prefWidth="1500.0">
          <children>
-            <LineChart fx:id="lineChart" layoutX="2.0" layoutY="5.0" prefHeight="639.0" prefWidth="1450.0" title="COMPARISION">
+            <LineChart fx:id="lineChart" layoutX="2.0" layoutY="5.0" prefHeight="739.0" prefWidth="1450.0" title="COMPARISION">
               <xAxis>
                 <CategoryAxis label="STATES" side="BOTTOM" fx:id="xAxis" />
               </xAxis>
@@ -26,7 +25,7 @@
                   <DropShadow color="#2f00ff" />
                </effect>
             </LineChart>
-            <Button fx:id="backBtnL" layoutX="711.0" layoutY="661.0" mnemonicParsing="false" onAction="#backListenerL" text="BACK">
+            <Button fx:id="backBtnL" layoutX="712.0" layoutY="762.0" mnemonicParsing="false" onAction="#backListenerL" text="BACK">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
