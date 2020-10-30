@@ -3,6 +3,7 @@ package sample;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -50,17 +53,17 @@ public class AllComparisionChart implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        XYChart.Series confirmSeries = new XYChart.Series();
-        confirmSeries.setName("CONFIRM CASES");
+        XYChart.Series<String,Number> confirmSeries = new XYChart.Series();
+        confirmSeries.setName("CONFIRMED");
 
-        XYChart.Series activeSeries = new XYChart.Series();
-        activeSeries.setName("ACTIVE CASES");
+        XYChart.Series<String,Number> activeSeries = new XYChart.Series();
+        activeSeries.setName("ACTIVE");
 
-        XYChart.Series recoverSeries = new XYChart.Series();
-        recoverSeries.setName("RECOVER CASES");
+        XYChart.Series<String,Number> recoverSeries = new XYChart.Series();
+        recoverSeries.setName("RECOVERED");
 
-        XYChart.Series deathSeries = new XYChart.Series();
-        deathSeries.setName("DEATH CASES");
+        XYChart.Series<String,Number> deathSeries = new XYChart.Series();
+        deathSeries.setName("DEATHS");
 
         try {
             fetchIndiaLatest.main(null);
@@ -107,5 +110,45 @@ public class AllComparisionChart implements Initializable {
         }
 
         lineChart.getData().addAll(confirmSeries,deathSeries,recoverSeries,activeSeries);
+
+        for (final XYChart.Data<String,Number> data : confirmSeries.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    Tooltip.install(data.getNode(),new Tooltip("State : "+data.getXValue()+"\nConfirmed : "+data.getYValue()));
+                }
+            });
+        }
+
+        for (final XYChart.Data<String,Number> data : activeSeries.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    Tooltip.install(data.getNode(),new Tooltip("State : "+data.getXValue()+"\nActive : "+data.getYValue()));
+                }
+            });
+        }
+
+        for (final XYChart.Data<String,Number> data : recoverSeries.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    Tooltip.install(data.getNode(),new Tooltip("State : "+data.getXValue()+"\nRecovered : "+data.getYValue()));
+                }
+            });
+        }
+
+        for (final XYChart.Data<String,Number> data : deathSeries.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    Tooltip.install(data.getNode(),new Tooltip("State : "+data.getXValue()+"\nDeaths : "+data.getYValue()));
+                }
+            });
+        }
     }
 }

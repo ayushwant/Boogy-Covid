@@ -52,7 +52,7 @@ public class ConfirmGraph implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         XYChart.Series dataSeries1 = new XYChart.Series();
-        dataSeries1.setName("CONFIRMED CASES");
+        dataSeries1.setName("CONFIRMED");
 
         try {
             fetchIndiaLatest.main(null);
