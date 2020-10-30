@@ -37,6 +37,58 @@ public class Statewise implements Initializable {
     @FXML private int activecase[]=new int[36];
     @FXML private int recovercases[]=new int[36];
     @FXML private int deathcase[]=new int[36];
+    @FXML private Button confirmCaseGraphBtn;
+    @FXML private Button activeCaseGraphBtn;
+    @FXML private Button recoverCaseGraphBtn;
+    @FXML private Button deathCaseGraphBtn;
+
+    @FXML
+    private void confirmGraphListener(ActionEvent event){
+        Stage stage= (Stage) confirmCaseGraphBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("confirmGraph.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 1500, 700));
+    }
+
+    @FXML
+    private void activeGraphListener(ActionEvent event){
+        Stage stage= (Stage) activeCaseGraphBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("activeGraph.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 1500, 700));
+    }
+
+    @FXML
+    private void recoverGraphListener(ActionEvent event){
+        Stage stage= (Stage) recoverCaseGraphBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("recoverGraph.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 1500, 700));
+    }
+
+    @FXML
+    private void deathGraphListener(ActionEvent event){
+        Stage stage= (Stage) deathCaseGraphBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("deathGraph.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root, 1500, 700));
+    }
 
     @FXML
     private TableView<stateData> tbl;
