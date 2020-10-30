@@ -189,7 +189,7 @@ public class DateWise implements Initializable {
                 int[] deathcase=new int[36];
 
                 Calendar calendar=Calendar.getInstance();
-                String date=calendar.get(Calendar.YEAR)+"-"+(calendar.get(Calendar.MONTH)+1)+"-"+calendar.get(Calendar.DATE);
+                String date=calendar.get(Calendar.YEAR)+"-"+(calendar.get(Calendar.MONTH)+1)+"-"+(calendar.get(Calendar.DATE)-1);
                 try {
                     BufferedReader br = new BufferedReader(new FileReader("indiaHistoryJSON.json"));
                     indiaHistory response = gson.fromJson(br, indiaHistory.class);

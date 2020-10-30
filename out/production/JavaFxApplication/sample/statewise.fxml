@@ -24,7 +24,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <TableView fx:id="tbl" layoutY="107.0" prefHeight="565.0" prefWidth="704.0">
+      <TableView fx:id="tbl" layoutY="163.0" prefHeight="510.0" prefWidth="704.0">
         <columns>
           <TableColumn fx:id="stateName_col" editable="false" prefWidth="337.0" style="-fx-alignment: center; -fx-font-weight: bold; -fx-border-color: black;" text="STATES" />
           <TableColumn fx:id="confirmed_col" editable="false" prefWidth="91.0" style="-fx-alignment: center; -fx-text-fill: red; -fx-font-weight: bold; -fx-border-color: red;" text="CONFIRMED" />
@@ -43,5 +43,46 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <AnchorPane layoutX="5.0" layoutY="108.0" prefHeight="50.0" prefWidth="693.0">
+         <children>
+            <Button fx:id="confirmCaseGraphBtn" layoutX="333.0" layoutY="10.0" mnemonicParsing="false" onAction="#confirmGraphListener" prefHeight="30.0" prefWidth="90.0" style="-fx-border-color: red;" text="CONFIRMED">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="104.0" layoutY="4.0" prefHeight="42.0" prefWidth="122.0" text="COMPARISION" textAlignment="CENTER" textFill="#110be3">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="activeCaseGraphBtn" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" onAction="#activeGraphListener" prefHeight="30.0" prefWidth="66.0" style="-fx-border-color: blue;" text="ACTIVE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="recoverCaseGraphBtn" layoutX="504.0" layoutY="10.0" mnemonicParsing="false" onAction="#recoverGraphListener" prefHeight="30.0" prefWidth="90.0" style="-fx-border-color: green;" text="RECOVER">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="deathCaseGraphBtn" layoutX="605.0" layoutY="10.0" mnemonicParsing="false" onAction="#deathGraphListener" prefHeight="30.0" prefWidth="66.0" style="-fx-border-color: yellow;" text="DEATH">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
