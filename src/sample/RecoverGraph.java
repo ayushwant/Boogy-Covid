@@ -49,7 +49,7 @@ public class RecoverGraph implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         XYChart.Series dataSeries1 = new XYChart.Series();
-        dataSeries1.setName("RECOVERED CASES");
+        dataSeries1.setName("RECOVERED");
 
         try {
             fetchIndiaLatest.main(null);

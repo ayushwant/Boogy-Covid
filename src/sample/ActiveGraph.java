@@ -51,7 +51,7 @@ public class ActiveGraph implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         XYChart.Series dataSeries1 = new XYChart.Series();
-        dataSeries1.setName("ACTIVE CASES");
+        dataSeries1.setName("ACTIVE");
 
         try {
             fetchIndiaLatest.main(null);

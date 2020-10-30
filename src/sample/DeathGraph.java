@@ -51,7 +51,7 @@ public class DeathGraph implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         XYChart.Series dataSeries1 = new XYChart.Series();
-        dataSeries1.setName("DEATH CASES");
+        dataSeries1.setName("DEATHS");
 
         try {
             fetchIndiaLatest.main(null);
