@@ -90,6 +90,19 @@ public class Statewise implements Initializable {
         stage.setScene(new Scene(root, 1500, 700));
     }
 
+    @FXML private Button lineChartBtn;
+    @FXML
+    private void lineChartListener(ActionEvent event){
+        Stage stage= (Stage) lineChartBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("allComparisionChart.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root));
+    }
+
     @FXML
     private TableView<stateData> tbl;
     @FXML
