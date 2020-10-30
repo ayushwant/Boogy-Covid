@@ -51,7 +51,7 @@ public class Statewise implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage.setScene(new Scene(root, 1500, 700));
+        stage.setScene(new Scene(root));
     }
 
     @FXML
@@ -63,7 +63,7 @@ public class Statewise implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage.setScene(new Scene(root, 1500, 700));
+        stage.setScene(new Scene(root));
     }
 
     @FXML
@@ -75,7 +75,7 @@ public class Statewise implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage.setScene(new Scene(root, 1500, 700));
+        stage.setScene(new Scene(root));
     }
 
     @FXML
@@ -87,7 +87,7 @@ public class Statewise implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage.setScene(new Scene(root, 1500, 700));
+        stage.setScene(new Scene(root));
     }
 
     @FXML private Button lineChartBtn;
