@@ -71,7 +71,7 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="searchBox" layoutX="228.0" layoutY="98.0" onKeyPressed="#searchListener" prefHeight="25.0" prefWidth="239.0" promptText="search state" style="-fx-border-color: blue;" />
+            <TextField fx:id="searchBox" layoutX="228.0" layoutY="98.0" onKeyPressed="#searchListener" prefHeight="25.0" prefWidth="239.0" promptText="search country" style="-fx-border-color: blue;" />
             <Label fx:id="timeStampLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="15.0" prefHeight="17.0" prefWidth="317.0" text="Label" />
             <Button fx:id="refreshBtn" layoutX="641.0" layoutY="-1.0" mnemonicParsing="false" onAction="#refreshListener" style="-fx-border-color: #d73c09; -fx-border-width: 3;" text="Refresh">
                <cursor>
