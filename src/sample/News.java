@@ -19,6 +19,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -64,7 +65,7 @@ public class News implements Initializable {
     @FXML private Button saveBtn19;
     @FXML private TextField tf20;
     @FXML private Button saveBtn20;
-    @FXML private Button saveAll;
+
 
     Desktop d=Desktop.getDesktop();
 
@@ -73,12 +74,16 @@ public class News implements Initializable {
     public News() throws IOException {
     }
 
+
+
     @FXML
-    void saveAllListener(ActionEvent event)
-    {
+    void link1(ActionEvent event) throws URISyntaxException, IOException {
+        d.browse(new URI(link[0]));
+    }
+    @FXML
+    void save1(ActionEvent event){
+
         File file = new File("savedNews.txt");
-
-
         BufferedWriter bf = null;
         try{
             FileWriter fileWriter = new FileWriter(file.getName(),true);
@@ -92,15 +97,8 @@ public class News implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+            saved.put(tf1.getText(),Description[0] + "\n" + "Link : " + link[0]);
 
-    @FXML
-    void link1(ActionEvent event) throws URISyntaxException, IOException {
-        d.browse(new URI(link[0]));
-    }
-    @FXML
-    void save1(ActionEvent event){
-        saved.put(tf1.getText(), link[0]);
     }
 
     @FXML
@@ -110,7 +108,22 @@ public class News implements Initializable {
 
     @FXML
     void save2(ActionEvent event){
-        saved.put(tf2.getText(), link[1]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf2.getText(),Description[1] + "\n" + "Link : " + link[1]);
     }
 
     @FXML
@@ -120,7 +133,22 @@ public class News implements Initializable {
 
     @FXML
     void save3(ActionEvent event){
-        saved.put(tf3.getText(), link[2]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf3.getText(),Description[2] + "\n" + "Link : " +  link[2]);
     }
     @FXML
     void link4(ActionEvent event) throws URISyntaxException, IOException {
@@ -129,7 +157,22 @@ public class News implements Initializable {
 
     @FXML
     void save4(ActionEvent event){
-        saved.put(tf4.getText(), link[3]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf4.getText(),Description[3] + "\n" + "Link : " +  link[3]);
     }
     @FXML
     void link5(ActionEvent event) throws URISyntaxException, IOException {
@@ -137,7 +180,22 @@ public class News implements Initializable {
     }
     @FXML
     void save5(ActionEvent event){
-        saved.put(tf5.getText(),link[4]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf5.getText(),Description[4] + "\n" + "Link : " + link[4]);
     }
 
     @FXML
@@ -146,7 +204,22 @@ public class News implements Initializable {
     }
     @FXML
     void save6(ActionEvent event){
-        saved.put(tf6.getText(),link[5]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf6.getText(),Description[5] + "\n" + "Link : " + link[5]);
     }
 
     @FXML
@@ -155,7 +228,22 @@ public class News implements Initializable {
     }
     @FXML
     void save7(ActionEvent event){
-        saved.put(tf7.getText(),link[6]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf7.getText(),Description[6] + "\n" + "Link : " + link[6]);
     }
     @FXML
     void link8(ActionEvent event) throws URISyntaxException, IOException {
@@ -163,7 +251,22 @@ public class News implements Initializable {
     }
     @FXML
     void save8(ActionEvent event){
-        saved.put(tf8.getText(),link[7]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf8.getText(),Description[7] + "\n" + "Link : " + link[7]);
     }
 
     @FXML
@@ -172,7 +275,22 @@ public class News implements Initializable {
     }
     @FXML
     void save9(ActionEvent event){
-        saved.put(tf9.getText(),link[8]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf9.getText(),Description[8] + "\n" + "Link : " + link[8]);
     }
 
     @FXML
@@ -181,7 +299,22 @@ public class News implements Initializable {
     }
     @FXML
     void save10(ActionEvent event){
-        saved.put(tf10.getText(),link[9]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf10.getText(),Description[9] + "\n" + "Link : " + link[9]);
     }
 
     @FXML
@@ -190,7 +323,22 @@ public class News implements Initializable {
     }
     @FXML
     void save11(ActionEvent event){
-        saved.put(tf11.getText(),link[10]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf11.getText(),Description[10] + "\n" + "Link : " + link[10]);
     }
 
     @FXML
@@ -199,7 +347,22 @@ public class News implements Initializable {
     }
     @FXML
     void save12(ActionEvent event){
-        saved.put(tf12.getText(),link[11]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf12.getText(),Description[11] + "\n" + "Link : " + link[11]);
     }
 
     @FXML
@@ -208,7 +371,22 @@ public class News implements Initializable {
     }
     @FXML
     void save13(ActionEvent event){
-        saved.put(tf13.getText(),link[12]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf13.getText(),Description[12] + "\n" + "Link : " + link[12]);
     }
 
     @FXML
@@ -217,7 +395,22 @@ public class News implements Initializable {
     }
     @FXML
     void save14(ActionEvent event){
-        saved.put(tf14.getText(),link[13]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf14.getText(),Description[13] + "\n" + "Link : " + link[13]);
     }
 
     @FXML
@@ -226,7 +419,22 @@ public class News implements Initializable {
     }
     @FXML
     void save15(ActionEvent event){
-        saved.put(tf15.getText(),link[14]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf15.getText(),Description[14] + "\n" + "Link : " + link[14]);
     }
 
     @FXML
@@ -235,7 +443,22 @@ public class News implements Initializable {
     }
     @FXML
     void save16(ActionEvent event){
-        saved.put(tf16.getText(),link[15]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf16.getText(),Description[15] + "\n" + "Link : " + link[15]);
     }
 
     @FXML
@@ -244,7 +467,22 @@ public class News implements Initializable {
     }
     @FXML
     void save17(ActionEvent event){
-        saved.put(tf17.getText(),link[16]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf17.getText(),Description[16] + "\n" + "Link : " + link[16]);
     }
 
     @FXML
@@ -253,7 +491,22 @@ public class News implements Initializable {
     }
     @FXML
     void save18(ActionEvent event){
-        saved.put(tf18.getText(),link[17]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf18.getText(),Description[17] + "\n" + "Link : " + link[17]);
     }
 
     @FXML
@@ -262,7 +515,22 @@ public class News implements Initializable {
     }
     @FXML
     void save19(ActionEvent event){
-        saved.put(tf19.getText(),link[18]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf19.getText(),Description[18] + "\n" + "Link : " + link[18]);
     }
 
     @FXML
@@ -271,12 +539,28 @@ public class News implements Initializable {
     }
     @FXML
     void save20(ActionEvent event){
-        saved.put(tf20.getText(),link[19]);
+
+        File file = new File("savedNews.txt");
+        BufferedWriter bf = null;
+        try{
+            FileWriter fileWriter = new FileWriter(file.getName(),true);
+            bf = new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, String> entry : saved.entrySet())
+            {
+                bf.write(entry.getKey() + "\n" +entry.getValue() +"\n\n");
+            }
+            bf.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        saved.put(tf20.getText(),Description[19] + "\n" + "Link : " + link[19]);
     }
 
 
     @FXML private String headline[]=new String[20];
     @FXML private String link[]=new String[20];
+    @FXML private String Description[]=new String[20];
 
     @FXML private Button refreshBtnN;
     @FXML
@@ -305,6 +589,20 @@ public class News implements Initializable {
         stage.setScene(new Scene(root));
     }
 
+    @FXML private Button favouriteBtn;
+    @FXML
+    void favouriteListener(ActionEvent event){
+        Stage stage= (Stage) favouriteBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("savedNews.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(root));
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         fetchNews.main(null);
@@ -322,6 +620,7 @@ public class News implements Initializable {
                     {
                         headline[i]=art.title;
                         link[i]=art.url;
+                        Description[i]=art.description;
                         i++;
                     }
                 } catch (FileNotFoundException e) {

@@ -136,7 +136,7 @@ public class DateWise implements Initializable {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
-                        dateLbl.setText("Date :- "+finalDateshow);
+                        dateLbl.setText("Date :- "+date);
                         comfirmLbl.setText(""+ finalConfirmed);
                         activeLbl.setText(""+ finalActive);
                         recoverLbl.setText(""+ finalRecovered);
