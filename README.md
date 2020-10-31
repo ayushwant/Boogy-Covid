@@ -26,6 +26,7 @@ In above Window :
 
 
 <img src = "ProjectScreenshots/Lg.png" width=600> <img src = "ProjectScreenshots/Cg.png" width=600> 
+
 In above window :
 
 * We can get data of individual Bar by placing cursor.
