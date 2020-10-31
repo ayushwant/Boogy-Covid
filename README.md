@@ -23,6 +23,8 @@ In above Window :
 * We get latest Covid Stats of each States.
 * We can search Covid Stats of individual State.
 * We can lookup at different Comparision Charts.
+
+
 <img src = "ProjectScreenshots/Lg.png" width=600> <img src = "ProjectScreenshots/Cg.png" width=600> 
 In above window :
 
