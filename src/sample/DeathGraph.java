@@ -3,6 +3,7 @@ package sample;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,6 +14,8 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -50,8 +53,8 @@ public class DeathGraph implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        XYChart.Series dataSeries1 = new XYChart.Series();
-        dataSeries1.setName("DEATHS");
+        XYChart.Series<String,Number> deathSeries = new XYChart.Series();
+        deathSeries.setName("DEATHS");
 
         try {
             fetchIndiaLatest.main(null);
@@ -78,8 +81,18 @@ public class DeathGraph implements Initializable {
             e.printStackTrace();
         }
         for (int i = 0; i < 36; i++) {
-            dataSeries1.getData().add(new XYChart.Data(statename[i], deathcase[i]));
+            deathSeries.getData().add(new XYChart.Data(statename[i], deathcase[i]));
         }
-        barChart.getData().addAll(dataSeries1);
+        barChart.getData().addAll(deathSeries);
+
+        for (final XYChart.Data<String,Number> data : deathSeries.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    Tooltip.install(data.getNode(),new Tooltip("State : "+data.getXValue()+"\nDeaths : "+data.getYValue()));
+                }
+            });
+        }
     }
 }

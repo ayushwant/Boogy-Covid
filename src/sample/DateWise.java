@@ -75,7 +75,7 @@ public class DateWise implements Initializable {
 
     @FXML private DatePicker datePicker;
     @FXML private LocalDate date;
-    @FXML private void dateListener(ActionEvent event) {
+    @FXML private void dateListener(ActionEvent event) {;
         date= datePicker.getValue();
 
         new Thread(new Runnable() {
