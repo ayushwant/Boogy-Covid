@@ -11,12 +11,29 @@
 #### Starting Application ...  we get following window ->
 
 <img src = "ProjectScreenshots/firstPage.png" height=400>
-In above window , we get latest Covid Stats of India. 
+In above window :
+
+* We get latest Covid Stats of India. 
 
 #### After clicking "State Wise Tracker" Button , we get following window ->
 
 <img src = "ProjectScreenshots/statewise.png" height=400>
-In above Window , we get latest Covid Stats of each States.
-We can search Covid Stats of individual State.
-We can lookup at different Comparision Charts.
-<img src = "ProjectScreenshots/Lg.png" height=400> 
+In above Window :
+
+* We get latest Covid Stats of each States.
+* We can search Covid Stats of individual State.
+* We can lookup at different Comparision Charts.
+<img src = "ProjectScreenshots/Lg.png" width=600> <img src = "ProjectScreenshots/Cg.png" width=600> 
+In above window :
+
+* We can get data of individual Bar by placing cursor.
+
+#### After clicking "Historical Data" Button , we get following window ->
+
+<img src = "ProjectScreenshots/historical.png" height=400> 
+In above Window :
+
+* We can search Covid Stats of different dates.
+
+
+
