@@ -58,11 +58,11 @@ In above Window :
 
 <img src = "ProjectScreenshots/help.png" height=400>
 
+#### After licking "Latest News" Button , we get following window ->
 
+<img src = "ProjectScreenshots/news.png" height=400>
+In above Window:
 
-
-
-
-
-
-
+* We can read news Headline.
+* We can read news by clicking Read Button.
+* We can save or favourite news by clicking Save Button.
