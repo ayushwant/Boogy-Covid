@@ -22,7 +22,7 @@
                         </CategoryAxis>
                     </xAxis>
                     <yAxis>
-                        <NumberAxis fx:id="yAxis" label="NUMBER OF CIVILITIONS" side="LEFT" />
+                        <NumberAxis fx:id="yAxis" label="NUMBER OF CASES" side="LEFT" />
                     </yAxis>
                     <effect>
                         <InnerShadow choke="0.26" color="#ff9d00" height="32.92" radius="16.555" width="35.3" />
