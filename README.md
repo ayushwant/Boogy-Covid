@@ -5,6 +5,8 @@
 * It shows Comparision Graph of Covid Data.
 * It helps in analysing your self against Covid Symptoms. 
 * It provides latest Covid News.  
-* It shows basic Advisory about Covid & connects to official WHO & GOV of India Websites. 
+* It shows basic Advisory about Covid & connects to official WHO & GOV of India Websites.
+
+### Boogy-Covid Application
 
 
