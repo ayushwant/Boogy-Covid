@@ -25,7 +25,7 @@ public class SavedNews implements Initializable {
         Stage stage= (Stage) backBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("news.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/news.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

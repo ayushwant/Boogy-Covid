@@ -19,6 +19,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import sample.fetchClasses.fetchWorldLatest;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -35,7 +37,7 @@ public class Countrywise implements Initializable {
         Stage stage= (Stage) refreshBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("countrywise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/countrywise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,7 +49,7 @@ public class Countrywise implements Initializable {
         Stage stage= (Stage) backBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

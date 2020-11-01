@@ -17,6 +17,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import sample.fetchClasses.fetchIndiaLatest;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -42,7 +44,7 @@ public class RecoverGraph implements Initializable {
         Stage stage= (Stage) backBtnR.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("statewise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/statewise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,4 +1,4 @@
-package sample;
+package sample.fetchClasses;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,7 +12,8 @@ public class fetchIndiaLatest
 {
     public static void main(String[] args) throws IOException {
 
-        String searchUrl = "https://api.rootnet.in/covid19-in/stats/latest";
+        String searchUrl = null;
+        searchUrl = "https://api.rootnet.in/covid19-in/stats/latest";
         Gson gson = new GsonBuilder().create();
 
         // creating and writing to file
@@ -31,6 +32,7 @@ public class fetchIndiaLatest
                 int c;
                 while ((c = br.read()) != -1) // write to file
                 {
+                    //fos.write(br.read());
                     fos.write((char) c);     // writing characters
                 }
             }

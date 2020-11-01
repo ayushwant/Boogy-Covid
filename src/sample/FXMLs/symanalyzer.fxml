@@ -220,7 +220,7 @@
             <children>
                 <ImageView fitHeight="153.0" fitWidth="570.0" layoutX="80.0" layoutY="34.0" pickOnBounds="true" smooth="false">
                     <image>
-                        <Image url="@../img/symptom-1.png" />
+                        <Image url="@../../img/symptom-1.png" />
                     </image>
                 </ImageView>
             <Label layoutX="300.0" layoutY="1.0" text="SYMPTOMS" textFill="#ab1b1b">

@@ -15,7 +15,7 @@ public class Advisory {
         Stage stage= (Stage) backBtnA.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

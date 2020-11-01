@@ -99,7 +99,7 @@
                <children>
                   <ImageView fitHeight="291.0" fitWidth="370.0" layoutX="180.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/symptom.png" />
+                        <Image url="@../../img/symptom.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="symptomBtn" contentDisplay="CENTER" layoutX="277.0" layoutY="291.0" mnemonicParsing="false" onAction="#symanaListener" prefHeight="20.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 3;" text="SYMPTOM ANALYSER" textFill="#ff1300">

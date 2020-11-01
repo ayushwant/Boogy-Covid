@@ -2,7 +2,6 @@ package sample;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import javafx.application.Platform;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -22,6 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import sample.fetchClasses.fetchIndiaLatest;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -47,7 +47,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) confirmCaseGraphBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("confirmGraph.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/confirmGraph.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,7 +59,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) activeCaseGraphBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("activeGraph.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/activeGraph.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,7 +71,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) recoverCaseGraphBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("recoverGraph.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/recoverGraph.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -83,7 +83,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) deathCaseGraphBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("deathGraph.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/deathGraph.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -96,7 +96,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) lineChartBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("allComparisionChart.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/allComparisionChart.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -122,7 +122,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) backBtnS.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -135,7 +135,7 @@ public class Statewise implements Initializable {
         Stage stage= (Stage) refreshBtnS.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("statewise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/statewise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

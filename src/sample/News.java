@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.fetchClasses.fetchNews;
 
 import java.awt.*;
 import java.io.*;
@@ -19,7 +20,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -549,7 +549,7 @@ public class News implements Initializable {
         Stage stage= (Stage) refreshBtnN.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("news.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/news.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -562,7 +562,7 @@ public class News implements Initializable {
         Stage stage= (Stage) backBtnN.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -575,7 +575,7 @@ public class News implements Initializable {
         Stage stage= (Stage) favouriteBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("savedNews.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/savedNews.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

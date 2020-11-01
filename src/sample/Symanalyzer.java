@@ -34,7 +34,7 @@ public class Symanalyzer {
         Stage stage= (Stage) resetBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("symanalyzer.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/symanalyzer.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,7 +47,7 @@ public class Symanalyzer {
         Stage stage= (Stage) backBtnSA.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

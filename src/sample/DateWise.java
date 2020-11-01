@@ -54,7 +54,7 @@ public class DateWise implements Initializable {
         Stage stage= (Stage) backBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,7 +66,7 @@ public class DateWise implements Initializable {
         Stage stage= (Stage) resetBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("dateWise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/dateWise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

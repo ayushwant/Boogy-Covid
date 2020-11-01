@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import sample.fetchClasses.fetchIndiaLatest;
 
 public class Controller implements Initializable {
 
@@ -43,7 +44,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) advisoryBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("advisory.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/advisory.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,7 +58,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) refreshBtnM.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,7 +71,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) stateBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("statewise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/statewise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -84,7 +85,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) newsBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("news.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/news.fxml"));
         } catch (IOException e) {
             System.out.println("no");
             e.printStackTrace();
@@ -98,7 +99,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) symptomBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("symanalyzer.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/symanalyzer.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -111,7 +112,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) symptomBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("countrywise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/countrywise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -124,7 +125,7 @@ public class Controller implements Initializable {
         Stage stage= (Stage) historicalBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("dateWise.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXMLs/dateWise.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

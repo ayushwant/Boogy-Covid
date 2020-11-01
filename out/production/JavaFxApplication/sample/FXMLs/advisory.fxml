@@ -24,7 +24,7 @@
          <children>
             <ImageView fitHeight="134.0" fitWidth="334.0" layoutX="184.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/00-57-46-block-one.png" />
+                  <Image url="@../../img/00-57-46-block-one.png" />
                </image>
             </ImageView>
             <Label layoutX="307.0" layoutY="132.0" prefHeight="19.0" prefWidth="88.0" text="PREVENTION" textFill="#5fb216">
@@ -34,7 +34,7 @@
             </Label>
             <ImageView fitHeight="134.0" fitWidth="334.0" layoutX="184.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/00-59-08-block-two.png" />
+                  <Image url="@../../img/00-59-08-block-two.png" />
                </image>
             </ImageView>
             <Label layoutX="297.0" text="HOW IT SPREADS" textFill="#ff5800">
@@ -48,7 +48,7 @@
          <children>
             <ImageView fitHeight="274.0" fitWidth="310.0" layoutX="205.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/11-11-47-Graphic_1.png" />
+                  <Image url="@../../img/11-11-47-Graphic_1.png" />
                </image>
             </ImageView>
          </children>

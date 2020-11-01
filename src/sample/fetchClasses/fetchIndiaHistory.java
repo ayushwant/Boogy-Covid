@@ -1,4 +1,4 @@
-package sample;
+package sample.fetchClasses;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

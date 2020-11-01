@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.io.IOException;
+import sample.fetchClasses.fetchIndiaHistory;
 
 public class Main extends Application {
 
@@ -19,7 +19,7 @@ public class Main extends Application {
             }
         }).start();
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLs/sample.fxml"));
         primaryStage.setTitle("TRACK A COV");
         primaryStage.setScene(new Scene(root, 700, 700));
         primaryStage.show();
