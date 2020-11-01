@@ -26,45 +26,25 @@ import java.util.ResourceBundle;
 public class News implements Initializable {
 
     @FXML private TextField tf1;
-    @FXML private Button saveBtn1;
     @FXML private TextField tf2;
-    @FXML private Button saveBtn2;
     @FXML private TextField tf3;
-    @FXML private Button saveBtn3;
     @FXML private TextField tf4;
-    @FXML private Button saveBtn4;
     @FXML private TextField tf5;
-    @FXML private Button saveBtn5;
     @FXML private TextField tf6;
-    @FXML private Button saveBtn6;
     @FXML private TextField tf7;
-    @FXML private Button saveBtn7;
     @FXML private TextField tf8;
-    @FXML private Button saveBtn8;
     @FXML private TextField tf9;
-    @FXML private Button saveBtn9;
     @FXML private TextField tf10;
-    @FXML private Button saveBtn10;
     @FXML private TextField tf11;
-    @FXML private Button saveBtn11;
     @FXML private TextField tf12;
-    @FXML private Button saveBtn12;
     @FXML private TextField tf13;
-    @FXML private Button saveBtn13;
     @FXML private TextField tf14;
-    @FXML private Button saveBtn14;
     @FXML private TextField tf15;
-    @FXML private Button saveBtn15;
     @FXML private TextField tf16;
-    @FXML private Button saveBtn16;
     @FXML private TextField tf17;
-    @FXML private Button saveBtn17;
     @FXML private TextField tf18;
-    @FXML private Button saveBtn18;
     @FXML private TextField tf19;
-    @FXML private Button saveBtn19;
     @FXML private TextField tf20;
-    @FXML private Button saveBtn20;
 
 
     Desktop d=Desktop.getDesktop();
